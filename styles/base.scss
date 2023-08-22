@@ -1,0 +1,137 @@
+$main-color: #323264;
+$accent-color: #f0145a;
+$blue: #24a3ff;
+$blue1: #0085ff;
+$blue2: #006ccf;
+$gray-bg: #ededf7;
+$white: #fff;
+$gradient-text: linear-gradient(118deg, #ef8080 0%, #f0145a 100%);
+$gradient-red-text: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+$gradient-bg: linear-gradient(135deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+
+  text-decoration: none;
+  vertical-align: baseline;
+  box-sizing: border-box;
+
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+button,
+a[href] {
+  cursor: pointer;
+}
+body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media screen and (min-width: 1024px) {
+    padding: 0 60px;
+  }
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: $gradient-text;
+}
+
+.gradient-red-text {
+  background: $gradient-red-text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  @media screen and (min-width: 768px) {
+    font-size: 42px;
+  }
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.small-btn {
+  background: transparent;
+  width: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in;
+  &:hover:not(.active) {
+    background-color: $gray-bg;
+    color: black;
+  }
+  &.active {
+    background: $accent-color;
+  }
+}
+.header {
+  position: absolute;
+  padding-top: 50px;
+  width: 100%;
+  color: white;
+
+  .flex.wrapper {
+    align-items: center;
+    gap: 24px;
+    justify-content: space-between;
+  }
+  .first-row {
+    gap: 5px;
+    align-items: center;
+  }
+  nav {
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: flex-end;
+  }
+  ul {
+    gap: 8px;
+    margin-left: 8px;
+    list-style-position: inside;
+    align-items: center;
+    img {
+      width: 24px;
+      height: 24px;
+      vertical-align: top;
+    }
+  }
+  &.white {
+    .small-btn {
+      color: inherit;
+    }
+  }
+}

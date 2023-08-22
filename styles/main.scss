@@ -1,0 +1,117 @@
+@import "./base.scss";
+
+.section-1 {
+  min-height: 70vh;
+  padding-top: 152px;
+  background: $gradient-bg;
+}
+
+.section-2 {
+  background: $white;
+  padding: 40px 16px;
+
+  // Slider-Start
+  .slider {
+    margin-bottom: 40px;
+    .slick-dots {
+      bottom: -40px;
+      li {
+        button::before {
+          opacity: 0.2;
+          color: $blue;
+          font-size: 16px;
+        }
+
+        &.slick-active button::before {
+          opacity: 1;
+        }
+      }
+    }
+    .slick-arrow::before {
+      color: blue;
+      font-size: 25px;
+    }
+
+    &__item {
+      border-radius: 12px;
+      background-color: $gray-bg;
+      padding: 20px;
+      @media (min-width: 768px) {
+        padding: 0;
+      }
+    }
+    &__left-block {
+      padding-right: 20px;
+      order: 2;
+      width: 100%;
+      @media (min-width: 768px) {
+        padding: 20px;
+        width: 35%;
+        min-width: 412px;
+        max-width: 412px;
+        order: 0;
+      }
+    }
+    &__flex {
+      display: flex;
+      flex-direction: column;
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  // Slider-End
+}
+.ui-tabs {
+  display: flex;
+  align-items: center;
+  height: 312px;
+  gap: 40px;
+  justify-content: center;
+}
+.ui-tabs-nav {
+  display: block;
+}
+.ui-tabs-tab {
+  transition: all 0.5s;
+  display: block;
+  padding-right: 40px;
+  border-right: 4px solid gray;
+  a {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: gray;
+  }
+}
+
+.ui-tabs-active {
+  border-color: red;
+  a {
+    color: red;
+  }
+}
+
+.ui-tabs-panel {
+  width: 60%;
+  max-width: 600px;
+  padding: 40px 0;
+}

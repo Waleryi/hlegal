@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+button,
+a[href] {
+  cursor: pointer;
+}
+
+body {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 60px;
+  }
+}
+
+.gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(118deg, #ef8080 0%, #f0145a 100%);
+}
+
+.gradient-red-text {
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.small-btn {
+  background: transparent;
+  width: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in;
+}
+.small-btn:hover:not(.active) {
+  background-color: #ededf7;
+  color: black;
+}
+.small-btn.active {
+  background: #f0145a;
+}
+
+.header {
+  position: absolute;
+  padding-top: 50px;
+  width: 100%;
+  color: white;
+}
+.header .flex.wrapper {
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+}
+.header .first-row {
+  gap: 5px;
+  align-items: center;
+}
+.header nav {
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+.header ul {
+  gap: 8px;
+  margin-left: 8px;
+  list-style-position: inside;
+  align-items: center;
+}
+.header ul img {
+  width: 24px;
+  height: 24px;
+  vertical-align: top;
+}
+.header.white .small-btn {
+  color: inherit;
+}
+
+.section-1 {
+  min-height: 70vh;
+  padding-top: 152px;
+  background: linear-gradient(135deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
+}
+
+.section-2 {
+  background: #fff;
+  padding: 40px 16px;
+}
+.section-2 .slider {
+  margin-bottom: 40px;
+}
+.section-2 .slider .slick-dots {
+  bottom: -40px;
+}
+.section-2 .slider .slick-dots li button::before {
+  opacity: 0.2;
+  color: #24a3ff;
+  font-size: 16px;
+}
+.section-2 .slider .slick-dots li.slick-active button::before {
+  opacity: 1;
+}
+.section-2 .slider .slick-arrow::before {
+  color: blue;
+  font-size: 25px;
+}
+.section-2 .slider__item {
+  border-radius: 12px;
+  background-color: #ededf7;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .section-2 .slider__item {
+    padding: 0;
+  }
+}
+.section-2 .slider__left-block {
+  padding-right: 20px;
+  order: 2;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .section-2 .slider__left-block {
+    padding: 20px;
+    width: 35%;
+    min-width: 412px;
+    max-width: 412px;
+    order: 0;
+  }
+}
+.section-2 .slider__flex {
+  display: flex;
+  flex-direction: column;
+}
+.section-2 .slider__flex img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .section-2 .slider__flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-2 .slider__flex img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+.ui-tabs {
+  display: flex;
+  align-items: center;
+  height: 312px;
+  gap: 40px;
+  justify-content: center;
+}
+
+.ui-tabs-nav {
+  display: block;
+}
+
+.ui-tabs-tab {
+  transition: all 0.5s;
+  display: block;
+  padding-right: 40px;
+  border-right: 4px solid gray;
+}
+.ui-tabs-tab a {
+  display: block;
+  width: 100%;
+  text-align: right;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: gray;
+}
+
+.ui-tabs-active {
+  border-color: red;
+}
+.ui-tabs-active a {
+  color: red;
+}
+
+.ui-tabs-panel {
+  width: 60%;
+  max-width: 600px;
+  padding: 40px 0;
+}/*# sourceMappingURL=main.css.map */
