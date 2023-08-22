@@ -1,13 +1,44 @@
-@import "./base.scss";
+@use "./base.scss";
 
 .section-1 {
-  min-height: 70vh;
+  min-height: 100vh;
   padding-top: 152px;
-  background: $gradient-bg;
+  background: base.$gradient-bg;
+  // background-image: url(../images/Symbol.svg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // position: relative;
+}
+
+.logo-item {
+  position: absolute;
+  top: 0;
+  right: 30%;
+  z-index: 0;
+  img {
+    z-index: 0;
+    // position: absolute;
+    // top: 0;
+    // right: 30%;
+  }
+  p {
+    font-size: 38px;
+    font-weight: 700;
+    color: base.$white;
+    position: absolute;
+    top: 45%;
+    right: 10%;
+  }
+  svg {
+    cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    right: 50%;
+  }
 }
 
 .section-2 {
-  background: $white;
+  background: base.$white;
   padding: 40px 16px;
 
   // Slider-Start
@@ -18,7 +49,7 @@
       li {
         button::before {
           opacity: 0.2;
-          color: $blue;
+          color: base.$blue;
           font-size: 16px;
         }
 
@@ -34,7 +65,7 @@
 
     &__item {
       border-radius: 12px;
-      background-color: $gray-bg;
+      background-color: base.$gray-bg;
       padding: 20px;
       @media (min-width: 768px) {
         padding: 0;
@@ -75,6 +106,9 @@
     }
   }
   // Slider-End
+}
+.tabs {
+  padding-top: 850px;
 }
 .ui-tabs {
   display: flex;

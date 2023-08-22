@@ -10,22 +10,24 @@
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 button,
 a[href] {
   cursor: pointer;
+  font-weight: 700;
 }
 
 body {
   font-size: 18px;
-  font-weight: 400;
   line-height: 26px;
-  font-family: "Montserrat", sans-serif;
 }
 
 .container {
   max-width: 1440px;
+  z-index: 2;
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
@@ -33,6 +35,15 @@ body {
 @media screen and (min-width: 1024px) {
   .container {
     padding: 0 60px;
+  }
+}
+@media (max-width: 768px) {
+  .container .navigation {
+    display: none;
+  }
+  .container ul.flex li {
+    list-style: none;
+    text-decoration: none;
   }
 }
 
@@ -73,9 +84,21 @@ h2 {
 .flex {
   display: flex;
 }
+.flexli {
+  list-style: none;
+}
+@media (max-width: 768px) {
+  .flex ul.flex {
+    list-style: none;
+  }
+  .flex li {
+    list-style: none;
+  }
+}
 
 .small-btn {
   background: transparent;
+  font-weight: 700;
   width: 29px;
   display: flex;
   align-items: center;
@@ -105,6 +128,7 @@ h2 {
   align-items: center;
   gap: 24px;
   justify-content: space-between;
+  z-index: 2;
 }
 .header .first-row {
   gap: 5px;

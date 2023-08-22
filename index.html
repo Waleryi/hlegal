@@ -48,21 +48,21 @@
           <img src="./images/Logo.svg" alt="logo" />
           <div>
             <div class="flex first-row">
-              <button class="small-btn active">EN</button>
-              <button class="small-btn">RU</button>
               <button class="small-btn">UA</button>
+              <button class="small-btn">RU</button>
+              <button class="small-btn active">EN</button>
               <ul class="flex">
-                <li>Одеса, Адміральський пр., 3</li>
-                <li><a href="tel:+38(050)3901591">+38 (050) 390 15 91</a></li>
+                <li>Kyiv, Mechnikova str, 14/1</li>
+                <li><a href="tel:+38(050)3901591">0800 211 927</a></li>
                 <li><img src="./images/facebook.svg" alt="facebook" /></li>
               </ul>
             </div>
-            <nav class="flex">
-              <a href="">про нас</a>
-              <a href="">про нас</a>
-              <a href="">про нас</a>
-              <a href="">про нас</a>
-              <a href="">про нас</a>
+            <nav class="flex navigation">
+              <a href="">about us</a>
+              <a href="">services</a>
+              <a href="">team</a>
+              <a href="">publications</a>
+              <a href="">contact</a>
             </nav>
           </div>
         </div>
@@ -70,6 +70,13 @@
     </header>
     <main>
       <section class="section-1">
+        <div class="logo-item">
+          <img src="./images/H-Logo.svg" alt="" width="697px" height="799px" />
+          <p>you legal solutions provider</p>
+          <svg width="42px" height="42px" style="min-width: 10px" fill="red">
+            <use href="./images/sprite.svg#logo-check" />
+          </svg>
+        </div>
         <div class="tabs">
           <ul>
             <li><a href="#tabs-1">Nunc tincidunt</a></li>
@@ -267,7 +274,7 @@
           }
         });
         // Скрипт, запускающий/ломающий скрипт исходя из размера экрана - Финиш
-        
+
         // Jquery-Tabs Start-->
         $(".tabs").tabs();
         // Jquery-Tabs End-->
