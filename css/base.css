@@ -84,7 +84,7 @@ h2 {
 .flex {
   display: flex;
 }
-.flexli {
+.flex > li {
   list-style: none;
 }
 @media (max-width: 768px) {

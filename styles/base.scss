@@ -92,7 +92,7 @@ h2 {
 
 .flex {
   display: flex;
-  &li {
+  > li {
     list-style: none;
   }
   @media (max-width: 768px) {
@@ -132,7 +132,6 @@ h2 {
   padding-top: 50px;
   width: 100%;
   color: white;
-
   .flex.wrapper {
     align-items: center;
     gap: 24px;
