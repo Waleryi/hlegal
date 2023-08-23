@@ -160,16 +160,22 @@ h2 {
   height: 2000px;
   padding-top: 152px;
   background: linear-gradient(135deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
+  z-index: -3;
+}
+
+.container {
+  position: relative;
+  z-index: 3;
 }
 
 .logo-item {
   position: absolute;
   top: 0;
   right: 30%;
-  z-index: 0;
+  z-index: 1;
 }
 .logo-item img {
-  z-index: 0;
+  z-index: 1;
 }
 .logo-item p {
   font-size: 38px;
@@ -184,6 +190,18 @@ h2 {
   position: absolute;
   bottom: 5%;
   right: 50%;
+}
+
+.flex.navigation a:hover {
+  color: red;
+}
+.flex a:hover {
+  color: red;
+}
+.flex li::before {
+  content: "●";
+  color: #b3b3ba;
+  padding: 0 6px;
 }
 
 .main-container {

@@ -5,19 +5,25 @@
   height: 2000px;
   padding-top: 152px;
   background: base.$gradient-bg;
+  z-index: -3;
   // background-image: url(../images/Symbol.svg);
   // background-repeat: no-repeat;
   // background-size: cover;
   // position: relative;
 }
 
+.container {
+  position: relative;
+  z-index: 3;
+}
+
 .logo-item {
   position: absolute;
   top: 0;
   right: 30%;
-  z-index: 0;
+  z-index: 1;
   img {
-    z-index: 0;
+    z-index: 1;
     // position: absolute;
     // top: 0;
     // right: 30%;
@@ -36,6 +42,23 @@
     bottom: 5%;
     right: 50%;
   }
+}
+
+.flex {
+  &.navigation {
+    a:hover {
+      color: red;
+    }
+  }
+  a:hover {
+    color: red;
+  }
+  li::before {
+    content: "●";
+    color: #b3b3ba;
+    padding: 0 6px;
+  }
+
 }
 
 .main-container {
