@@ -15,7 +15,7 @@
 }
 
 button,
-a[href] {
+a {
   cursor: pointer;
   font-weight: 700;
 }

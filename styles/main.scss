@@ -44,24 +44,42 @@
 }
 
 .services-section {
-  padding-top: 185px;
+  padding: 185px 60px 0;
   a {
     color: base.$blue;
+    text-transform: uppercase;
   }
   h2 {
     color: red;
-    padding-bottom: 60px;
+    padding: 15px 0 60px;
   }
   .services-cards {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-rows: 1fr 1fr;
+    h4 {
+      font-size: 22px;
+      font-weight: 700;
+      color: base.$blue;
+      padding: 30px 0 15px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.63;
+      color: base.$white;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 60px;
   }
   .services-icons {
-    width: 64px;
-    height: 64px;
+    width: 100px;
+    height: 100px;
     border-radius: 24px;
     background-color: base.$white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -189,6 +207,8 @@
 }
 
 .companies {
+  max-width: 1720px;
+  margin: 0 auto;
   h3 {
     font-size: 14px;
     font-weight: 700;
@@ -200,8 +220,8 @@
   }
   .company-items {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
   .company-card {
     height: 120px;
@@ -251,4 +271,131 @@
 }
 .company-card:nth-of-type(12) {
   background-color: #000;
+}
+
+// ---------------------------------
+.publications-wrapper {
+  padding: 30px 60px;
+  background: #f5f5fa;
+  a {
+    text-transform: uppercase;
+    color: base.$blue;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  h2 {
+    font-size: 38px;
+    font-weight: 700;
+    color: red;
+    padding: 15px 0 30px;
+  }
+}
+
+.publications-cards {
+  background: #f5f5fa;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  &__card {
+    background: #fff;
+    border-radius: 8px;
+    p {
+      font-size: 14px;
+      line-height: 1.58;
+      padding: 15px 30px 30px;
+      color: #000;
+    }
+  }
+  &__item {
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: base.$blue;
+      padding: 30px 30px 15px;
+    }
+    p {
+      padding: 0 30px 15px;
+      color: #b3b3ba;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+  &__line {
+    height: 4px;
+    width: 90%;
+    padding: 0 30px;
+    background-color: #b3b3ba;
+    margin: 0 auto;
+  }
+}
+
+footer {
+  background: #f5f5fa;
+  .foot-wrapper {
+    border-top: 4px solid #b3b3ba;
+    width: 1300px;
+    margin: 0 auto;
+
+    .footer-nav {
+      display: flex;
+      align-items: center;
+      padding: 21px 0 30px;
+      a {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      // .footer-nav:nth-child(2) {
+      //   color: base.$main-color;
+      // }
+      // .footer-nav:nth-child(3) {
+      //   color: base.$main-color;
+      // }
+      // a::nth-of-type(2) {
+      //   color: blue;
+      //   color: base.$blue;
+      // }
+      // a::nth-of-type(3) {
+      //   color: base.$blue;
+      // }
+      a:nth-of-type(1):before {
+        content: "";
+      }
+      a::before {
+        content: "●";
+        color: #b3b3ba;
+        padding: 0 10px;
+      }
+    }
+
+    .foot_map {
+      display: flex;
+      justify-content: space-between;
+      .foot_items {
+        display: flex;
+        align-items: baseline;
+        span {
+          font-size: 16px;
+          color: base.$main-color;
+        }
+        > a {
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: base.$blue;
+        }
+        > a::before {
+          content: "●";
+          color: #b3b3ba;
+        }
+      }
+      span {
+        font-size: 16px;
+        color: #b3b3ba;
+      }
+    }
+  }
 }
