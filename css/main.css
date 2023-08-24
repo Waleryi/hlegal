@@ -180,6 +180,8 @@ h2 {
 .logo-item p {
   font-size: 38px;
   font-weight: 700;
+  font-style: normal;
+  line-height: normal;
   color: #fff;
   position: absolute;
   top: 45%;
@@ -560,4 +562,23 @@ footer .foot-wrapper .foot_map .foot_items > a::before {
 footer .foot-wrapper .foot_map span {
   font-size: 16px;
   color: #b3b3ba;
+}
+
+@media (min-width: 370px) {
+  .flex.wrapper img {
+    width: 69px;
+    height: 32px;
+  }
+  .logo-item p {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .logo-item {
+    right: -20%;
+  }
+  .logo-item img {
+    width: 523px;
+    height: 600px;
+    overflow: hidden;
+  }
 }/*# sourceMappingURL=main.css.map */

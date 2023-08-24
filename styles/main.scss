@@ -31,6 +31,8 @@
   p {
     font-size: 38px;
     font-weight: 700;
+    font-style: normal;
+    line-height: normal;
     color: base.$white;
     position: absolute;
     top: 45%;
@@ -58,7 +60,6 @@
     color: #b3b3ba;
     padding: 0 6px;
   }
-
 }
 
 .main-container {
@@ -419,6 +420,29 @@ footer {
         font-size: 16px;
         color: #b3b3ba;
       }
+    }
+  }
+}
+
+@media (min-width: 370px) {
+  .flex.wrapper {
+    img {
+      width: 69px;
+      height: 32px;
+    }
+  }
+
+  .logo-item p {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .logo-item {
+    right: -20%;
+
+    img {
+      width: 523px;
+      height: 600px;
+      overflow: hidden;
     }
   }
 }
