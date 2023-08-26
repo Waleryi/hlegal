@@ -2,7 +2,8 @@
 
 .section-1 {
   min-height: 100vh;
-  height: 2000px;
+  border-radius: 0 0 12px;
+  // max-height: 4300px;
   padding-top: 152px;
   background: base.$gradient-bg;
   z-index: -3;
@@ -24,6 +25,7 @@
   z-index: 1;
   img {
     z-index: 1;
+    overflow: hidden;
     // position: absolute;
     // top: 0;
     // right: 30%;
@@ -43,6 +45,10 @@
     position: absolute;
     bottom: 5%;
     right: 50%;
+    stroke: red;
+    &:hover {
+      fill: red;
+    }
   }
 }
 
@@ -114,24 +120,24 @@
   // Slider-Start
   .slider {
     margin-bottom: 40px;
-    .slick-dots {
-      bottom: -40px;
-      li {
-        button::before {
-          opacity: 0.2;
-          color: base.$blue;
-          font-size: 16px;
-        }
+    // .slick-dots {
+    //   bottom: -40px;
+    //   li {
+    //     button::before {
+    //       opacity: 0.2;
+    //       color: base.$blue;
+    //       font-size: 16px;
+    //     }
 
-        &.slick-active button::before {
-          opacity: 1;
-        }
-      }
-    }
-    .slick-arrow::before {
-      color: blue;
-      font-size: 25px;
-    }
+    //     &.slick-active button::before {
+    //       opacity: 1;
+    //     }
+    //   }
+    // }
+    // .slick-arrow::before {
+    //   color: blue;
+    //   font-size: 25px;
+    // }
 
     &__item {
       border-radius: 12px;
@@ -187,7 +193,7 @@
   }
   p {
     font-size: 19px;
-    line-height: 1.58; /* 157.895% */
+    line-height: 1.58;
   }
 }
 .ui-tabs {
@@ -227,7 +233,7 @@
 .ui-tabs-panel {
   width: 60%;
   max-width: 600px;
-  padding: 40px 0;
+  padding: 40px 15px;
 }
 
 .companies {
@@ -237,6 +243,7 @@
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1px;
+    line-height: normal;
     text-transform: uppercase;
     padding-bottom: 30px;
     color: base.$main-color;
@@ -300,6 +307,7 @@
 // ---------------------------------
 .publications-wrapper {
   padding: 30px 60px;
+  max-width: 100%;
   background: #f5f5fa;
   a {
     text-transform: uppercase;
@@ -311,6 +319,7 @@
   h2 {
     font-size: 38px;
     font-weight: 700;
+    line-height: normal;
     color: red;
     padding: 15px 0 30px;
   }
@@ -329,6 +338,9 @@
       line-height: 1.58;
       padding: 15px 30px 30px;
       color: #000;
+    }
+    img {
+      width: 100%;
     }
   }
   &__item {
@@ -360,7 +372,8 @@ footer {
   background: #f5f5fa;
   .foot-wrapper {
     border-top: 4px solid #b3b3ba;
-    width: 1300px;
+    width: 90%;
+    max-width: 1600px;
     margin: 0 auto;
 
     .footer-nav {
@@ -424,7 +437,121 @@ footer {
   }
 }
 
-@media (min-width: 370px) {
+.container-mobile {
+  display: none;
+}
+
+.foot-wrapper-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .services-section {
+    .services-cards {
+      p {
+        padding-bottom: 25px;
+      }
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 45px;
+    }
+  }
+  .logo-item {
+    right: 12%;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    max-width: 800px;
+  }
+  .header {
+    .container {
+      display: none;
+    }
+  }
+  .container-mobile {
+    display: flex;
+    min-width: 335px;
+    width: 100%;
+    height: 102px;
+    margin: 0 auto;
+    position: fixed;
+    padding: 0 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    overflow: hidden;
+  }
+
+  .logo-item {
+    right: 0%;
+    // img {
+    //   height: 768px;
+    //   width: 1024px;
+    // }
+    p {
+      right: 5%;
+      // max-width: 300px;
+      // margin: 0 auto;
+    }
+  }
+  // Text-Slider
+  .tabs {
+    padding-top: 1100px;
+    padding-bottom: 150px;
+    overflow: hidden;
+  }
+
+  .ui-tabs {
+    flex-direction: column;
+  }
+
+  .ui-tabs-tab {
+    transition: all 0.5s;
+    display: block;
+    padding-right: 40px;
+    border-bottom: 4px solid gray;
+    border-right: none;
+    a {
+      display: block;
+      width: 100%;
+      text-align: right;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      color: gray;
+    }
+  }
+  .ui-tabs-active {
+    border-color: red;
+    a {
+      color: red;
+    }
+  }
+  // Цветные фирмы-карточки
+  .companies {
+    .company-items {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+  .publications-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lastcard {
+    grid-column: 1/3;
+  }
+}
+// ---800px-END
+
+@media (max-width: 640px) {
+  // .logo-item {
+  //   right: -32%;
+  // }
   .flex.wrapper {
     img {
       width: 69px;
@@ -438,7 +565,109 @@ footer {
   }
   .logo-item {
     right: -20%;
+    overflow: hidden;
 
+    img {
+      width: 523px;
+      height: 600px;
+      overflow: hidden;
+    }
+  }
+  .services-section {
+    h2 {
+      padding: 15px 0 30px;
+      line-height: normal;
+    }
+    .services-cards {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .companies {
+    .company-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .company-card {
+      width: 100%;
+    }
+  }
+
+  .publications-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .foot-wrapper {
+    display: none;
+  }
+  .foot-wrapper-mobile {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 4px solid #b3b3ba;
+    width: 90%;
+    max-width: 640px;
+    margin: 0 auto;
+
+    a {
+      font-size: 16px;
+      line-height: normal;
+      padding: 10px;
+      font-weight: 700;
+      &:nth-of-type(1) {
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      &:nth-of-type(3) {
+        color: base.$main-color;
+      }
+      &:nth-of-type(4) {
+        color: base.$blue;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      color: #b3b3ba;
+      padding-top: 30px;
+      &:nth-of-type(1) {
+        color: #000;
+      }
+    }
+    a {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: base.$blue;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .logo-item {
+    right: -25%;
+  }
+}
+
+@media (max-width: 370px) {
+  .flex.wrapper {
+    img {
+      width: 69px;
+      height: 32px;
+    }
+  }
+
+  .logo-item p {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .logo-item {
     img {
       width: 523px;
       height: 600px;
