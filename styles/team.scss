@@ -28,7 +28,21 @@
     gap: 24px;
     justify-content: space-between;
     z-index: 2;
+    svg {
+      color: base.$accent-color;
+    }
   }
+  .logo-wrapper {
+    display: flex;
+    align-items: flex-start;
+    p {
+      color: base.$main-color;
+      font-size: 36px;
+      font-style: normal;
+      line-height: normal;
+    }
+  }
+
   .first-row {
     gap: 5px;
     align-items: center;
@@ -41,7 +55,7 @@
 
       li {
         svg {
-          fill: red;
+          color: red;
         }
       }
       img {
@@ -69,7 +83,10 @@
         margin-left: 10px;
         color: base.$blue;
         &:nth-of-type(3) {
-          color: red;
+          background: base.$gradient-red-text;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           border-bottom: 2px solid red;
         }
       }
@@ -119,12 +136,14 @@ main {
     img {
       border-radius: 12px;
       max-height: 400px;
+      width: 100%;
+      height: auto;
       object-fit: cover;
     }
-    &__description{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    &__description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     &__about {
       a {

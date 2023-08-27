@@ -214,10 +214,16 @@ h2 {
   padding: 10px 0 0 15px;
 }
 .flex.navigation a:hover {
-  color: red;
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .flex a:hover {
-  color: red;
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .flex li::before {
   content: "●";
@@ -799,6 +805,19 @@ footer .foot-wrapper .foot_map span {
   justify-content: space-between;
   z-index: 2;
 }
+.header .flex.wrapper svg {
+  color: #f0145a;
+}
+.header .logo-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+.header .logo-wrapper p {
+  color: #323264;
+  font-size: 36px;
+  font-style: normal;
+  line-height: normal;
+}
 .header .first-row {
   gap: 5px;
   align-items: center;
@@ -811,7 +830,7 @@ footer .foot-wrapper .foot_map span {
   align-items: center;
 }
 .header .first-row ul li svg {
-  fill: red;
+  color: red;
 }
 .header .first-row ul img {
   width: 24px;
@@ -832,7 +851,10 @@ footer .foot-wrapper .foot_map span {
   color: #24a3ff;
 }
 .header .flex.navigation a:nth-of-type(3) {
-  color: red;
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   border-bottom: 2px solid red;
 }
 .header .flex.navigation a:hover {
@@ -878,6 +900,8 @@ main .team-card {
 main .team-card img {
   border-radius: 12px;
   max-height: 400px;
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }

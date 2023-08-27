@@ -60,11 +60,17 @@
       padding: 10px 0 0 15px;
     }
     a:hover {
-      color: red;
+      background: base.$gradient-red-text;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
   a:hover {
-    color: red;
+    background: base.$gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   li::before {
     content: "●";

@@ -214,10 +214,16 @@ h2 {
   padding: 10px 0 0 15px;
 }
 .flex.navigation a:hover {
-  color: red;
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .flex a:hover {
-  color: red;
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .flex li::before {
   content: "●";
