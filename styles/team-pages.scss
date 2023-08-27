@@ -111,6 +111,7 @@ main {
   margin: 0 auto;
 
   h1 {
+    display: inline;
     margin: 0 auto;
     padding: 0 0 60px;
     width: 80%;
@@ -123,6 +124,43 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .member-wrapper{
+    display: flex;
+  }
+
+  .member-image {
+    img {
+      max-width: 400px;
+      height: auto;
+      border-radius: 12px;
+    }
+  }
+
+  .member-about{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .member-links {
+    ul {display: flex;
+    flex-direction: row;
+    justify-content: space-between;}
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   .team-card-wrapper {
     display: flex;
