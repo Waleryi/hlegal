@@ -808,11 +808,12 @@ footer .foot-wrapper .foot_map span {
 .header .flex.wrapper svg {
   color: #f0145a;
 }
-.header .logo-wrapper {
+.header .logo-wrapper a {
   display: flex;
   align-items: flex-start;
+  justify-content: flex-start;
 }
-.header .logo-wrapper p {
+.header .logo-wrapper a p {
   color: #323264;
   font-size: 36px;
   font-style: normal;
@@ -856,6 +857,15 @@ footer .foot-wrapper .foot_map span {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 2px solid red;
+}
+.header .flex.navigation a:hover {
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header .flex.navigation a:active {
+  scale: 0.9;
 }
 .header .flex.navigation a:hover {
   color: red;
@@ -915,6 +925,9 @@ main .team-card__about a:hover {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+main .team-card__about a:active {
+  scale: 0.9;
 }
 
 footer {

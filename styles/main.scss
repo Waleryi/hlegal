@@ -91,7 +91,10 @@
     text-transform: uppercase;
   }
   h2 {
-    color: red;
+    background: base.$gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 15px 0 60px;
   }
   .services-cards {
@@ -237,7 +240,10 @@
 .ui-tabs-active {
   border-color: red;
   a {
-    color: red;
+    background: base.$gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -331,7 +337,10 @@
     font-size: 38px;
     font-weight: 700;
     line-height: normal;
-    color: red;
+    background: base.$gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 15px 0 30px;
   }
 }
@@ -540,7 +549,10 @@ footer {
   .ui-tabs-active {
     border-color: red;
     a {
-      color: red;
+      background: base.$gradient-red-text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     }
   }
   // Цветные фирмы-карточки

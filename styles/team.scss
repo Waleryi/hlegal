@@ -33,14 +33,18 @@
     }
   }
   .logo-wrapper {
-    display: flex;
+    a {
+      display: flex;
     align-items: flex-start;
+    justify-content: flex-start;
     p {
       color: base.$main-color;
       font-size: 36px;
       font-style: normal;
       line-height: normal;
     }
+    }
+    
   }
 
   .first-row {
@@ -88,6 +92,15 @@
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           border-bottom: 2px solid red;
+        }
+        &:hover {
+          background: base.$gradient-red-text;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &:active {
+          scale: 0.9;
         }
       }
       a:hover {
@@ -157,9 +170,10 @@ main {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
+        &:active {
+          scale: 0.9;
+        }
       }
-      
-
     }
   }
 }

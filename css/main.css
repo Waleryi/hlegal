@@ -244,7 +244,10 @@ h2 {
   text-transform: uppercase;
 }
 .services-section h2 {
-  color: red;
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding: 15px 0 60px;
 }
 .services-section .services-cards {
@@ -377,7 +380,10 @@ h2 {
   border-color: red;
 }
 .ui-tabs-active a {
-  color: red;
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .ui-tabs-panel {
@@ -482,7 +488,10 @@ h2 {
   font-size: 38px;
   font-weight: 700;
   line-height: normal;
-  color: red;
+  background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding: 15px 0 30px;
 }
 
@@ -659,7 +668,10 @@ footer .foot-wrapper .foot_map span {
     border-color: red;
   }
   .ui-tabs-active a {
-    color: red;
+    background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .companies .company-items {
     grid-template-columns: repeat(3, 1fr);
