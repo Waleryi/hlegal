@@ -4,7 +4,7 @@ $blue: #24a3ff;
 $blue1: #0085ff;
 $blue2: #006ccf;
 $gray-bg: #ededf7;
-$gray-text: #B3B3BA;
+$gray-text: #b3b3ba;
 $white: #fff;
 $gradient-text: linear-gradient(118deg, #ef8080 0%, #f0145a 100%);
 $gradient-red-text: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
@@ -26,6 +26,7 @@ $gradient-bg: linear-gradient(135deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
   line-height: inherit;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 button,
 a
@@ -119,6 +120,7 @@ h2 {
   &:hover:not(.active) {
     background-color: $gray-bg;
     color: black;
+    transition: color 0.3s;
   }
   &.active {
     background: $accent-color;

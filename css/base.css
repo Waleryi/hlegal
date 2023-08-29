@@ -12,6 +12,7 @@
   line-height: inherit;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 button,
@@ -111,6 +112,7 @@ h2 {
 .small-btn:hover:not(.active) {
   background-color: #ededf7;
   color: black;
+  transition: color 0.3s;
 }
 .small-btn.active {
   background: #f0145a;
