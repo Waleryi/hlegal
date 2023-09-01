@@ -253,7 +253,7 @@ h2 {
 }
 
 .services-section {
-  padding: 185px 60px 0;
+  padding: 185px 60px 60px;
 }
 .services-section a {
   color: #24a3ff;
@@ -316,6 +316,14 @@ h2 {
   .section-2 .slider__item {
     padding: 0;
   }
+}
+.section-2 .slider .slick-dots li button:before {
+  opacity: 0.2;
+  color: #24a3ff;
+  font-size: 16px;
+}
+.section-2 .slider .slick-dots li.slick-active button:before {
+  opacity: 1;
 }
 .section-2 .slider__left-block {
   padding-right: 20px;
@@ -837,7 +845,10 @@ footer .foot-wrapper .foot_map span {
     border-bottom: 4px solid rgba(255, 255, 255, 0.3);
   }
   .ui-tabs {
-    flex-direction: column;
+    display: block;
+    gap: 40px;
+    height: 312px;
+    margin-bottom: 60px;
   }
   .ui-tabs-tab {
     transition: all 0.5s;
@@ -947,13 +958,12 @@ footer .foot-wrapper .foot_map span {
     margin: 0 auto;
   }
   .foot-wrapper-mobile a {
-    font-size: 16px;
     line-height: normal;
     padding: 10px;
     font-weight: 700;
+    color: #24a3ff;
   }
   .foot-wrapper-mobile a:nth-of-type(1) {
-    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
@@ -963,6 +973,14 @@ footer .foot-wrapper .foot_map span {
   .foot-wrapper-mobile a:nth-of-type(4) {
     color: #24a3ff;
   }
+  .foot-wrapper-mobile a:hover {
+    color: #f0145a;
+    transition: color 0.3s;
+  }
+  .foot-wrapper-mobile a svg:hover {
+    color: #f0145a;
+    transition: color 0.3s;
+  }
   .foot-wrapper-mobile span {
     font-size: 16px;
     color: #b3b3ba;
@@ -970,13 +988,6 @@ footer .foot-wrapper .foot_map span {
   }
   .foot-wrapper-mobile span:nth-of-type(1) {
     color: #000;
-  }
-  .foot-wrapper-mobile a {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #24a3ff;
   }
 }
 @media (max-width: 450px) {

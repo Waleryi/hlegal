@@ -106,7 +106,7 @@
 }
 
 .services-section {
-  padding: 185px 60px 0;
+  padding: 185px 60px 60px;
   a {
     color: base.$blue;
     font-size: 14px;
@@ -168,6 +168,18 @@
       padding: 20px;
       @media (min-width: 768px) {
         padding: 0;
+      }
+    }
+
+    .slick-dots li {
+      button:before {
+        opacity: 0.2;
+        color: base.$blue;
+        font-size: 16px;
+      }
+
+      &.slick-active button:before {
+        opacity: 1;
       }
     }
     &__left-block {
@@ -288,7 +300,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 1;
-    &.wannabiz{
+    &.wannabiz {
       img {
         max-height: 32px;
         width: auto;
@@ -722,8 +734,14 @@ footer {
     }
   }
 
+  // .ui-tabs {
+  //   flex-direction: column;
+  // }
   .ui-tabs {
-    flex-direction: column;
+    display: block;
+    gap: 40px;
+    height: 312px;
+    margin-bottom: 60px;
   }
 
   .ui-tabs-tab {
@@ -755,10 +773,10 @@ footer {
       -webkit-text-fill-color: transparent;
     }
   }
-  
-.ui-tabs-panel {
-  width: 100%;
-}
+
+  .ui-tabs-panel {
+    width: 100%;
+  }
   // Text-Slider under H-End-media-800
   // Цветные фирмы-карточки
   .companies {
@@ -861,14 +879,12 @@ footer {
     width: 90%;
     max-width: 640px;
     margin: 0 auto;
-
     a {
-      font-size: 16px;
       line-height: normal;
       padding: 10px;
       font-weight: 700;
+      color: base.$blue;
       &:nth-of-type(1) {
-        font-size: 12px;
         letter-spacing: 1px;
         text-transform: uppercase;
       }
@@ -877,6 +893,16 @@ footer {
       }
       &:nth-of-type(4) {
         color: base.$blue;
+      }
+      &:hover {
+        color: base.$accent-color;
+        transition: color 0.3s;
+      }
+      svg {
+        &:hover {
+          color: base.$accent-color;
+          transition: color 0.3s;
+        }
       }
     }
 
@@ -888,13 +914,13 @@ footer {
         color: #000;
       }
     }
-    a {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: base.$blue;
-    }
+    // a {
+    //   font-size: 12px;
+    //   font-weight: 700;
+    //   letter-spacing: 1px;
+    //   text-transform: uppercase;
+    //   color: base.$blue;
+    // }
   }
 }
 @media (max-width: 450px) {
