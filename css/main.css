@@ -433,18 +433,26 @@ h2 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  border-radius: 12px;
+  max-width: 1720px;
 }
 .companies .company-card {
   height: 120px;
-  max-width: 430px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 1;
+}
+.companies .company-card.wannabiz img {
+  max-height: 32px;
+  width: auto;
 }
 .companies .company-card img {
   max-height: 48px;
   width: auto;
-  padding: 10px 10px;
+  padding: 5px 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .company-card:nth-of-type(1) {
@@ -497,7 +505,8 @@ h2 {
 
 .publications-wrapper {
   padding: 30px 60px;
-  max-width: 100%;
+  margin: 0 auto;
+  max-width: 1720px;
   background: #f5f5fa;
 }
 .publications-wrapper a {
@@ -819,7 +828,13 @@ footer .foot-wrapper .foot_map span {
   .tabs {
     padding-top: 1100px;
     padding-bottom: 150px;
-    overflow: hidden;
+  }
+  .tabs ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
   }
   .ui-tabs {
     flex-direction: column;
@@ -828,7 +843,7 @@ footer .foot-wrapper .foot_map span {
     transition: all 0.5s;
     display: block;
     padding-right: 40px;
-    border-bottom: 4px solid gray;
+    border-bottom: none;
     border-right: none;
   }
   .ui-tabs-tab a {
@@ -840,6 +855,9 @@ footer .foot-wrapper .foot_map span {
     font-weight: 700;
     line-height: normal;
     color: gray;
+    white-space: nowrap;
+    border-bottom: none;
+    padding-bottom: 60px;
   }
   .ui-tabs-active {
     border-color: red;
@@ -849,6 +867,9 @@ footer .foot-wrapper .foot_map span {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .ui-tabs-panel {
+    width: 100%;
   }
   .companies .company-items {
     grid-template-columns: repeat(3, 1fr);
@@ -904,6 +925,9 @@ footer .foot-wrapper .foot_map span {
   .companies .company-card {
     width: 100%;
   }
+  .companies .company-card img {
+    padding: 0;
+  }
   .publications-cards {
     display: flex;
     flex-direction: column;
@@ -958,6 +982,9 @@ footer .foot-wrapper .foot_map span {
 @media (max-width: 450px) {
   .logo-item {
     right: -25%;
+  }
+  .company-card img {
+    max-height: 50%;
   }
 }
 @media (max-width: 370px) {

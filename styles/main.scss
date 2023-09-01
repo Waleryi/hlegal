@@ -56,10 +56,9 @@
 .flex {
   li {
     &:first-of-type {
-      a{
+      a {
         font-weight: 400;
       }
-      
     }
   }
 
@@ -280,17 +279,26 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    border-radius: 12px;
+    max-width: 1720px;
   }
   .company-card {
     height: 120px;
-    max-width: 430px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 1;
+    &.wannabiz{
+      img {
+        max-height: 32px;
+        width: auto;
+      }
+    }
     img {
       max-height: 48px;
       width: auto;
-      padding: 10px 10px;
+      padding: 5px 12px;
+      object-fit: cover;
     }
   }
 }
@@ -334,7 +342,8 @@
 // ---------------------------------
 .publications-wrapper {
   padding: 30px 60px;
-  max-width: 100%;
+  margin: 0 auto;
+  max-width: 1720px;
   background: #f5f5fa;
   a {
     text-transform: uppercase;
@@ -698,11 +707,19 @@ footer {
       // margin: 0 auto;
     }
   }
-  // Text-Slider
+
+  // Text-Slider under H-Start-media-800
   .tabs {
     padding-top: 1100px;
     padding-bottom: 150px;
-    overflow: hidden;
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+      // overflow-x: auto;
+    }
   }
 
   .ui-tabs {
@@ -713,7 +730,7 @@ footer {
     transition: all 0.5s;
     display: block;
     padding-right: 40px;
-    border-bottom: 4px solid gray;
+    border-bottom: none;
     border-right: none;
     a {
       display: block;
@@ -724,6 +741,9 @@ footer {
       font-weight: 700;
       line-height: normal;
       color: gray;
+      white-space: nowrap;
+      border-bottom: none;
+      padding-bottom: 60px;
     }
   }
   .ui-tabs-active {
@@ -735,6 +755,11 @@ footer {
       -webkit-text-fill-color: transparent;
     }
   }
+  
+.ui-tabs-panel {
+  width: 100%;
+}
+  // Text-Slider under H-End-media-800
   // Цветные фирмы-карточки
   .companies {
     .company-items {
@@ -812,6 +837,9 @@ footer {
     }
     .company-card {
       width: 100%;
+      img {
+        padding: 0;
+      }
     }
   }
 
@@ -872,6 +900,11 @@ footer {
 @media (max-width: 450px) {
   .logo-item {
     right: -25%;
+  }
+  .company-card {
+    img {
+      max-height: 50%;
+    }
   }
 }
 
