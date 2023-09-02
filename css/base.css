@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +12,8 @@
   outline: 0;
   text-decoration: none;
   vertical-align: baseline;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   font-size: inherit;
   font-family: inherit;
@@ -50,10 +58,12 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background: -o-linear-gradient(332deg, #ef8080 0%, #f0145a 100%);
   background: linear-gradient(118deg, #ef8080 0%, #f0145a 100%);
 }
 
 .gradient-red-text {
+  background: -o-linear-gradient(332deg, #f0145a 0%, #ef8080 100%);
   background: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -81,6 +91,8 @@ h2 {
 }
 
 .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .flex > li {
@@ -99,19 +111,29 @@ h2 {
   background: transparent;
   font-weight: 700;
   width: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 24px;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1px;
   border-radius: 8px;
+  -webkit-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
 .small-btn:hover:not(.active) {
   background-color: #ededf7;
   color: black;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
   transition: color 0.3s;
 }
 .small-btn.active {
@@ -125,20 +147,28 @@ h2 {
   color: white;
 }
 .header .flex.wrapper {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 24px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   z-index: 2;
 }
 .header .first-row {
   gap: 5px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header .first-row ul {
   gap: 8px;
   margin-left: 8px;
   list-style-position: inside;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header .first-row ul li svg {
   fill: red;
@@ -151,7 +181,9 @@ h2 {
 .header .first-row nav {
   gap: 15px;
   margin-top: 20px;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .header.white .small-btn {
   color: inherit;
@@ -161,4 +193,4 @@ h2 {
     list-style: none;
     text-decoration: none;
   }
-}/*# sourceMappingURL=base.css.map */
+}
