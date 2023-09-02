@@ -176,14 +176,17 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -67%);
+  width: 697px;
+  height: 799px;
+  transform: translate(-50%, -55%);
   z-index: 1;
+  max-width: 100%;
 }
 .section-1 .scroll-icon {
   color: white;
   position: absolute;
   z-index: 2;
-  top: 66%;
+  top: 88%;
   right: 51%;
 }
 .section-1 .scroll-icon:hover {
@@ -342,6 +345,9 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+.section-2 .slider__flex h2 {
+  padding-right: 8px;
+}
 .section-2 .slider__flex img {
   width: 60px;
   height: 60px;
@@ -357,14 +363,14 @@ h2 {
   }
   .section-2 .slider__flex img {
     width: 100%;
-    height: 100%;
+    height: 450px;
     border-radius: 0;
     padding: 0;
   }
 }
 
 .tabs {
-  padding-top: 850px;
+  padding-top: 110vh;
   color: #fff;
 }
 .tabs h2 {
@@ -387,6 +393,7 @@ h2 {
 
 .ui-tabs-nav {
   display: block;
+  overflow-x: auto;
 }
 
 .ui-tabs-tab {
@@ -661,14 +668,12 @@ footer .foot-wrapper .foot_map span {
 
 @media (max-width: 1024px) {
   .section-1 .h-logo {
-    transform: translate(-46%, -74%);
-  }
-  .section-1 .scroll-icon {
-    top: 61%;
+    transform: translate(-46%, -55%);
   }
   .section-1 > p {
     top: 31%;
-    right: 13%;
+    right: 9%;
+    transform: translate(-22%, 120%);
   }
   .services-section .services-cards {
     display: grid;
@@ -719,6 +724,7 @@ footer .foot-wrapper .foot_map span {
   }
   .container-mobile .second-row {
     display: flex;
+    max-width: 95vw;
     position: relative;
     z-index: 2;
     padding: 15px 15px;
@@ -742,6 +748,9 @@ footer .foot-wrapper .foot_map span {
     font-style: normal;
     line-height: normal;
   }
+  .container-mobile .second-row .logo-wrapper a svg {
+    color: #c71c36;
+  }
   .container-mobile #menu__toggle {
     opacity: 0;
   }
@@ -764,7 +773,7 @@ footer .foot-wrapper .foot_map span {
   }
   .container-mobile .menu__btn {
     position: fixed;
-    top: 93px;
+    top: 81px;
     right: 20px;
     width: 26px;
     height: 26px;
@@ -776,6 +785,7 @@ footer .foot-wrapper .foot_map span {
 .container-mobile .menu__btn span::after {
     display: block;
     position: absolute;
+    top: 12px;
     width: 100%;
     height: 4px;
     background-color: #fff;
@@ -793,12 +803,12 @@ footer .foot-wrapper .foot_map span {
     display: block;
     position: fixed;
     border-radius: 12px;
-    top: 56px;
+    bottom: 0;
     right: -130%;
-    width: 300px;
-    height: calc(100% - 56px);
+    transform: translate(-9%, 0%);
+    width: 85%;
     margin: 0;
-    padding: 60px 0;
+    padding-top: 60px;
     list-style: none;
     background-color: #fff;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
@@ -811,6 +821,9 @@ footer .foot-wrapper .foot_map span {
     background-color: #f5f5fa;
     border-radius: 12px;
     margin: 15px 12px;
+  }
+  .container-mobile .menu__box li a {
+    font-weight: 700;
   }
   .container-mobile .menu__box li:active {
     background-color: #e6e6f0;
@@ -836,14 +849,14 @@ footer .foot-wrapper .foot_map span {
   .container-mobile .menu__item:hover {
     background-color: #cfd8dc;
   }
-  .logo-item {
-    right: 0%;
+  .section-1 .h-logo {
+    max-width: 90%;
   }
-  .logo-item p {
-    right: 5%;
+  .section-1 > p {
+    transform: translate(3%, 120%);
   }
   .tabs {
-    padding-top: 1100px;
+    padding-top: 100vh;
     padding-bottom: 150px;
   }
   .tabs ul {
@@ -891,6 +904,9 @@ footer .foot-wrapper .foot_map span {
   .ui-tabs-panel {
     width: 100%;
   }
+  .services-section {
+    padding-top: 275px;
+  }
   .companies .company-items {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -916,18 +932,20 @@ footer .foot-wrapper .foot_map span {
     color: #f0145a;
     margin-right: 4px;
   }
-  .logo-item {
-    right: -20%;
+  .section-1 {
     overflow: hidden;
   }
-  .logo-item p {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  .logo-item img {
+  .section-1 > img {
     width: 523px;
     height: 600px;
-    overflow: hidden;
+    max-width: 90%;
+  }
+  .section-1 > p {
+    max-width: 200px;
+    transform: translate(-8%, 15%);
+  }
+  .section-1 .scroll-icon {
+    top: 80%;
   }
   .services-section h2 {
     padding: 15px 0 30px;
@@ -1000,8 +1018,11 @@ footer .foot-wrapper .foot_map span {
   }
 }
 @media (max-width: 450px) {
-  .logo-item {
-    right: -25%;
+  .section-1 > p {
+    right: 6%;
+  }
+  .section-1 .h-logo {
+    max-width: 90%;
   }
   .company-card img {
     max-height: 50%;
