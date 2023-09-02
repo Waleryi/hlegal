@@ -172,41 +172,39 @@ h2 {
   background: linear-gradient(135deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
   z-index: -3;
 }
-
-.container {
-  position: relative;
-  z-index: 3;
-}
-
-.logo-item {
+.section-1 .h-logo {
   position: absolute;
-  top: 0;
-  right: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -67%);
   z-index: 1;
 }
-.logo-item img {
-  z-index: 1;
-  overflow: hidden;
-}
-.logo-item svg {
+.section-1 .scroll-icon {
   color: white;
   position: absolute;
-  bottom: 5%;
-  right: 50%;
+  z-index: 2;
+  top: 66%;
+  right: 51%;
 }
-.logo-item svg:hover {
+.section-1 .scroll-icon:hover {
   color: #f0145a;
   transition: color 0.3s;
 }
-.logo-item p {
+.section-1 > p {
   font-size: 38px;
   font-weight: 700;
   font-style: normal;
   line-height: normal;
   color: #fff;
   position: absolute;
-  top: 45%;
-  right: 10%;
+  top: 33%;
+  right: 33%;
+  z-index: 2;
+}
+
+.container {
+  position: relative;
+  z-index: 3;
 }
 
 .flex li:first-of-type a {
@@ -253,7 +251,7 @@ h2 {
 }
 
 .services-section {
-  padding: 185px 60px 0;
+  padding: 185px 60px 60px;
 }
 .services-section a {
   color: #24a3ff;
@@ -292,6 +290,7 @@ h2 {
 }
 .services-section .services-icons {
   width: 100px;
+  position: relative;
   height: 100px;
   border-radius: 24px;
   background-color: #fff;
@@ -316,6 +315,14 @@ h2 {
   .section-2 .slider__item {
     padding: 0;
   }
+}
+.section-2 .slider .slick-dots li button:before {
+  opacity: 0.2;
+  color: #24a3ff;
+  font-size: 16px;
+}
+.section-2 .slider .slick-dots li.slick-active button:before {
+  opacity: 1;
 }
 .section-2 .slider__left-block {
   padding-right: 20px;
@@ -434,18 +441,23 @@ h2 {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   border-radius: 12px;
+  max-width: 1720px;
 }
 .companies .company-card {
   height: 120px;
-  max-width: 430px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 1;
+}
+.companies .company-card.wannabiz img {
+  max-height: 32px;
+  width: auto;
 }
 .companies .company-card img {
   max-height: 48px;
   width: auto;
-  padding: 10px 10px;
+  padding: 5px 12px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -500,7 +512,8 @@ h2 {
 
 .publications-wrapper {
   padding: 30px 60px;
-  max-width: 100%;
+  margin: 0 auto;
+  max-width: 1720px;
   background: #f5f5fa;
 }
 .publications-wrapper a {
@@ -647,6 +660,16 @@ footer .foot-wrapper .foot_map span {
 }
 
 @media (max-width: 1024px) {
+  .section-1 .h-logo {
+    transform: translate(-46%, -74%);
+  }
+  .section-1 .scroll-icon {
+    top: 61%;
+  }
+  .section-1 > p {
+    top: 31%;
+    right: 13%;
+  }
   .services-section .services-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -822,16 +845,25 @@ footer .foot-wrapper .foot_map span {
   .tabs {
     padding-top: 1100px;
     padding-bottom: 150px;
-    overflow: hidden;
+  }
+  .tabs ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
   }
   .ui-tabs {
-    flex-direction: column;
+    display: block;
+    gap: 40px;
+    height: 312px;
+    margin-bottom: 60px;
   }
   .ui-tabs-tab {
     transition: all 0.5s;
     display: block;
     padding-right: 40px;
-    border-bottom: 4px solid gray;
+    border-bottom: none;
     border-right: none;
   }
   .ui-tabs-tab a {
@@ -843,6 +875,9 @@ footer .foot-wrapper .foot_map span {
     font-weight: 700;
     line-height: normal;
     color: gray;
+    white-space: nowrap;
+    border-bottom: none;
+    padding-bottom: 60px;
   }
   .ui-tabs-active {
     border-color: red;
@@ -852,6 +887,9 @@ footer .foot-wrapper .foot_map span {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  .ui-tabs-panel {
+    width: 100%;
   }
   .companies .company-items {
     grid-template-columns: repeat(3, 1fr);
@@ -907,6 +945,9 @@ footer .foot-wrapper .foot_map span {
   .companies .company-card {
     width: 100%;
   }
+  .companies .company-card img {
+    padding: 0;
+  }
   .publications-cards {
     display: flex;
     flex-direction: column;
@@ -926,13 +967,12 @@ footer .foot-wrapper .foot_map span {
     margin: 0 auto;
   }
   .foot-wrapper-mobile a {
-    font-size: 16px;
     line-height: normal;
     padding: 10px;
     font-weight: 700;
+    color: #24a3ff;
   }
   .foot-wrapper-mobile a:nth-of-type(1) {
-    font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
@@ -942,6 +982,14 @@ footer .foot-wrapper .foot_map span {
   .foot-wrapper-mobile a:nth-of-type(4) {
     color: #24a3ff;
   }
+  .foot-wrapper-mobile a:hover {
+    color: #f0145a;
+    transition: color 0.3s;
+  }
+  .foot-wrapper-mobile a svg:hover {
+    color: #f0145a;
+    transition: color 0.3s;
+  }
   .foot-wrapper-mobile span {
     font-size: 16px;
     color: #b3b3ba;
@@ -950,17 +998,13 @@ footer .foot-wrapper .foot_map span {
   .foot-wrapper-mobile span:nth-of-type(1) {
     color: #000;
   }
-  .foot-wrapper-mobile a {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #24a3ff;
-  }
 }
 @media (max-width: 450px) {
   .logo-item {
     right: -25%;
+  }
+  .company-card img {
+    max-height: 50%;
   }
 }
 @media (max-width: 370px) {

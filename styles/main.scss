@@ -12,45 +12,43 @@
   // background-repeat: no-repeat;
   // background-size: cover;
   // position: relative;
-}
 
-.container {
-  position: relative;
-  z-index: 3;
-}
-
-.logo-item {
-  position: absolute;
-  top: 0;
-  right: 30%;
-  z-index: 1;
-  img {
+  // h-logo--!!
+  .h-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -67%);
     z-index: 1;
-    overflow: hidden;
-    // position: absolute;
-    // top: 0;
-    // right: 30%;
   }
-  svg {
+
+  .scroll-icon {
     color: white;
     position: absolute;
-    bottom: 5%;
-    right: 50%;
+    z-index: 2;
+    top: 66%;
+    right: 51%;
     &:hover {
       color: base.$accent-color;
       transition: color 0.3s;
     }
   }
-  p {
+  > p {
     font-size: 38px;
     font-weight: 700;
     font-style: normal;
     line-height: normal;
     color: base.$white;
     position: absolute;
-    top: 45%;
-    right: 10%;
+    top: 33%;
+    right: 33%;
+    z-index: 2;
   }
+}
+
+.container {
+  position: relative;
+  z-index: 3;
 }
 
 .flex {
@@ -146,6 +144,7 @@
   }
   .services-icons {
     width: 100px;
+    position: relative;
     height: 100px;
     border-radius: 24px;
     background-color: base.$white;
@@ -506,6 +505,19 @@ footer {
 }
 
 @media (max-width: 1024px) {
+  .section-1 {
+    .h-logo {
+      transform: translate(-46%, -74%);
+    }
+    .scroll-icon {
+      top: 61%;
+    }
+
+    > p {
+      top: 31%;
+      right: 13%;
+    }
+  }
   .services-section {
     .services-cards {
       p {
@@ -638,6 +650,7 @@ footer {
         display: block;
         position: absolute;
         width: 100%;
+        top: 8px;
         height: 4px;
         background-color: base.$white;
         transition-duration: 0.25s;
@@ -679,6 +692,9 @@ footer {
         background-color: #f5f5fa;
         border-radius: 12px;
         margin: 15px 12px;
+        a {
+          font-weight: 700;
+        }
         &:active {
           background-color: #e6e6f0;
         }
@@ -697,7 +713,6 @@ footer {
       text-align: center;
       font-size: 24px;
       font-style: normal;
-      font-weight: 700;
       line-height: normal;
       text-decoration: none;
       transition-duration: 0.25s;
