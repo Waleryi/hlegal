@@ -28,23 +28,22 @@
     gap: 24px;
     justify-content: space-between;
     z-index: 2;
-    svg {
-      color: base.$accent-color;
-    }
   }
   .logo-wrapper {
     a {
       display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    p {
-      color: base.$main-color;
-      font-size: 36px;
-      font-style: normal;
-      line-height: normal;
+      align-items: flex-start;
+      justify-content: flex-start;
+      svg {
+        color: base.$accent-color;
+      }
+      p {
+        color: base.$main-color;
+        font-size: 36px;
+        font-style: normal;
+        line-height: normal;
+      }
     }
-    }
-    
   }
 
   .first-row {
@@ -59,7 +58,11 @@
 
       li {
         svg {
-          color: red;
+          color: base.$gray-text;
+          &:hover {
+            color: base.$accent-color;
+            transition: color 0.3s;
+          }
         }
       }
       img {
@@ -74,11 +77,13 @@
       justify-content: flex-end;
     }
   }
-  &.white {
     .small-btn {
       color: inherit;
+      &.active {
+        color: #fff;
+      }
     }
-  }
+
 
   .flex {
     &.navigation {
@@ -98,6 +103,7 @@
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          transition: color 0.3s;
         }
         &:active {
           scale: 0.9;
@@ -105,15 +111,22 @@
       }
       a:hover {
         color: red;
+        transition: color 0.3s;
       }
     }
     a:hover {
       color: red;
+      transition: color 0.3s;
     }
     li::before {
       content: "●";
       color: #b3b3ba;
       padding: 0 6px;
+    }
+    li {
+      svg {
+        fill: #b3b3ba;
+      }
     }
   }
 }
@@ -157,10 +170,13 @@ main {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // &.team-cars-check {
-      //   color: red;
-      //   stroke: red;
-      // }
+      svg {
+        color: base.$blue;
+        &:hover {
+          color: #f0145a;
+          transition: color 0.3s;
+        }
+      }
     }
     &__about {
       a {
@@ -169,6 +185,7 @@ main {
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          transition: color 0.3s;
         }
         &:active {
           scale: 0.9;
@@ -243,6 +260,182 @@ footer {
         font-size: 16px;
         color: #b3b3ba;
       }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    max-width: 900px;
+  }
+  .header {
+    .container {
+      display: none;
+    }
+  }
+  .container-mobile {
+    display: flex;
+    min-width: 335px;
+    width: 100%;
+    // height: 102px;
+    margin: 0 auto;
+    position: fixed;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    overflow: hidden;
+    .flex.wrapper {
+      display: block;
+      width: 100%;
+    }
+    .first-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 15px;
+      background-color: #f5f5fa;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: row;
+    }
+    .second-row {
+      display: flex;
+      position: relative;
+      z-index: 2;
+      padding: 15px 15px;
+      .logo-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        max-width: 169px;
+        a {
+          display: flex;
+          align-items: flex-start;
+          justify-content: flex-start;
+          svg {
+            color: #f0145a;
+          }
+          p {
+            color: base.$main-color;
+            font-size: 36px;
+            font-style: normal;
+            line-height: normal;
+          }
+        }
+      }
+    }
+
+    // Burger-start
+    #menu__toggle {
+      opacity: 0;
+      &:checked {
+        + .menu__btn > span {
+          transform: rotate(45deg);
+          background-color: #f0145a;
+          &::before {
+            top: 0;
+            transform: rotate(0deg);
+            background-color: #f0145a;
+          }
+          &::after {
+            top: 0;
+            transform: rotate(90deg);
+            background-color: #f0145a;
+          }
+        }
+        ~ .menu__box {
+          right: 0 !important;
+        }
+      }
+    }
+
+    .menu__btn {
+      position: fixed;
+      top: 88px;
+      right: 20px;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      z-index: 1;
+      > span,
+      span::before,
+      span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: base.$main-color;
+        transition-duration: 0.25s;
+      }
+      span {
+        &::before {
+          content: "";
+          top: -8px;
+        }
+        &::after {
+          content: "";
+          top: 8px;
+        }
+      }
+    }
+    .menu__box {
+      display: block;
+      position: fixed;
+      border-radius: 12px;
+      bottom: 0;
+      right: -130%;
+      transform: translate(-9%, 0%);
+      width: 85%;
+      margin: 0;
+      padding-top: 60px;
+      list-style: none;
+      background-color: base.$white;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+      transition-duration: 0.25s;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5fa;
+        border-radius: 12px;
+        margin: 15px 12px;
+        a {
+          font-weight: 700;
+        }
+        &:active {
+          background-color: #e6e6f0;
+        }
+      }
+      li::before {
+        content: "";
+        a::before {
+          content: "";
+        }
+      }
+    }
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      color: base.$blue;
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-decoration: none;
+      transition-duration: 0.25s;
+      &.current {
+        color: #f0145a;
+      }
+    }
+    .menu__item:hover {
+      background-color: #cfd8dc;
+      transition: color 0.3s;
     }
   }
 }

@@ -18,7 +18,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -67%);
+    transform: translate(-50%, -55%);
     z-index: 1;
   }
 
@@ -26,7 +26,7 @@
     color: white;
     position: absolute;
     z-index: 2;
-    top: 66%;
+    top: 88%;
     right: 51%;
     &:hover {
       color: base.$accent-color;
@@ -196,6 +196,9 @@
     &__flex {
       display: flex;
       flex-direction: column;
+        h2 {
+          padding-right: 8px;
+        }
       img {
         width: 60px;
         height: 60px;
@@ -208,7 +211,7 @@
         align-items: center;
         img {
           width: 100%;
-          height: 100%;
+          height: 450px;
           border-radius: 0;
           padding: 0;
         }
@@ -218,7 +221,7 @@
   // Slider-End
 }
 .tabs {
-  padding-top: 850px;
+  padding-top: 693px;
   color: base.$white;
   h2 {
     font-size: 30px;
@@ -507,15 +510,13 @@ footer {
 @media (max-width: 1024px) {
   .section-1 {
     .h-logo {
-      transform: translate(-46%, -74%);
-    }
-    .scroll-icon {
-      top: 61%;
+      transform: translate(-46%, -55%);
     }
 
     > p {
       top: 31%;
-      right: 13%;
+      right: 9%;
+      transform: translate(-22%, 120%);
     }
   }
   .services-section {
@@ -619,26 +620,10 @@ footer {
         }
       }
     }
-    // #menu__toggle:checked + .menu__btn > span {
-    //   transform: rotate(45deg);
-    //   background-color: #f0145a;
-    // }
-    // #menu__toggle:checked + .menu__btn > span::before {
-    //   top: 0;
-    //   transform: rotate(0deg);
-    //   background-color: #f0145a;
-    // }
-    // #menu__toggle:checked + .menu__btn > span::after {
-    //   top: 0;
-    //   transform: rotate(90deg);
-    //   background-color: #f0145a;
-    // }
-    // #menu__toggle:checked ~ .menu__box {
-    //   right: 0 !important;
-    // }
+
     .menu__btn {
       position: fixed;
-      top: 93px;
+      top: 88px;
       right: 20px;
       width: 26px;
       height: 26px;
@@ -650,7 +635,6 @@ footer {
         display: block;
         position: absolute;
         width: 100%;
-        top: 8px;
         height: 4px;
         background-color: base.$white;
         transition-duration: 0.25s;
@@ -674,17 +658,17 @@ footer {
       display: block;
       position: fixed;
       border-radius: 12px;
-      top: 56px;
+      bottom: 0;
       right: -130%;
-      // transform: translate(-50%, -50%);
-      width: 300px;
-      height: calc(100% - 56px);
+      transform: translate(-9%, 0%);
+      width: 85%;
       margin: 0;
-      padding: 60px 0;
+      padding-top: 60px;
       list-style: none;
       background-color: base.$white;
       box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
       transition-duration: 0.25s;
+
       li {
         display: flex;
         justify-content: center;
@@ -713,6 +697,7 @@ footer {
       text-align: center;
       font-size: 24px;
       font-style: normal;
+      font-weight: 700;
       line-height: normal;
       text-decoration: none;
       transition-duration: 0.25s;
@@ -721,23 +706,15 @@ footer {
       background-color: #cfd8dc;
     }
   }
-
-  .logo-item {
-    right: 0%;
-    // img {
-    //   height: 768px;
-    //   width: 1024px;
-    // }
-    p {
-      right: 5%;
-      // max-width: 300px;
-      // margin: 0 auto;
+  .section-1 {
+    > p {
+      transform: translate(3%, 120%);
     }
   }
 
   // Text-Slider under H-Start-media-800
   .tabs {
-    padding-top: 1100px;
+    padding-top: 575px;
     padding-bottom: 150px;
     ul {
       display: flex;
@@ -810,9 +787,6 @@ footer {
 // ---800px-END
 
 @media (max-width: 640px) {
-  // .logo-item {
-  //   right: -32%;
-  // }
   .flex.wrapper {
     img {
       width: 69px;
@@ -837,20 +811,21 @@ footer {
     }
   }
 
-  .logo-item {
-    right: -20%;
+  .section-1 {
     overflow: hidden;
-    p {
-      max-width: 300px;
-      margin: 0 auto;
-    }
-
-    img {
+    > img {
       width: 523px;
       height: 600px;
-      overflow: hidden;
+    }
+    > p {
+      max-width: 300px;
+      transform: translate(-8%, 15%);
+    }
+    .scroll-icon {
+      top: 80%;
     }
   }
+
   .services-section {
     h2 {
       padding: 15px 0 30px;
@@ -939,8 +914,10 @@ footer {
   }
 }
 @media (max-width: 450px) {
-  .logo-item {
-    right: -25%;
+  .section-1 {
+    > p {
+      right: -12%;
+    }
   }
   .company-card {
     img {

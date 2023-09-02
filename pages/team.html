@@ -39,10 +39,13 @@
       <div class="container">
         <div class="flex wrapper">
           <div class="logo-wrapper">
-            <a href="../index.html"><img src="../images/Logo-Dark.svg" alt="logo" />
-            <svg width="21px" height="47px">
-              <use href="../images/sprite.svg#pages-slash" />
-            </svg> <p>team</p></a>
+            <a href="../index.html"
+              ><img src="../images/Logo-Dark.svg" alt="logo" />
+              <svg width="21px" height="47px">
+                <use href="../images/sprite.svg#pages-slash" />
+              </svg>
+              <p>team</p></a
+            >
           </div>
 
           <div>
@@ -62,7 +65,13 @@
                 </li>
                 <li><a href="tel:+38(050)3901591">0800 211 927</a></li>
                 <li>
-                  <img src="../images/Facebook-Footer.svg" alt="" />
+                  <svg
+                    width="24px"
+                    height="24px"
+                    style="min-width: 10px"
+                    >
+                    <use href="../images/sprite.svg#header-fb-icon" />
+                  </svg>
                   <!-- <svg
                       width="24px"
                       height="24px"
@@ -87,26 +96,39 @@
       <div class="container-mobile">
         <div class="flex wrapper">
           <div class="flex first-row">
-            <button class="small-btn">UA</button>
-            <button class="small-btn">RU</button>
-            <button class="small-btn active">EN</button>
-            <ul class="flex">
-              <li><a href="tel:+38(050)3901591">0800 211 927</a></li>
-            </ul>
+            <div class="buttons">
+              <button class="small-btn">UA</button>
+              <button class="small-btn">RU</button>
+              <button class="small-btn active">EN</button>
+            </div>
+            <a href="tel:+38(050)3901591">0800 211 927</a>
           </div>
           <div class="flex second-row">
-            <img src="./images/Logo.svg" alt="logo" />
-            <a href="">services</a>
-          </div>
+            <div class="logo-wrapper">
+              <a href="./index.html"
+                ><img src="../images/Logo-Dark.svg" alt="logo" />
+                <svg width="21px" height="47px">
+                  <use href="../images/sprite.svg#pages-slash" />
+                </svg>
+                <p>team</p></a
+              >
+            </div>
+            <!-- Burger-Start -->
+            <div class="hamburger-menu">
+              <input id="menu__toggle" type="checkbox" />
+              <label class="menu__btn" for="menu__toggle">
+                <span></span>
+              </label>
 
-          <div>
-            <nav class="flex navigation">
-              <a href="">about us</a>
-              <a href="#services">services</a>
-              <a href="">team</a>
-              <a href="#publications">publications</a>
-              <a href="">contact</a>
-            </nav>
+              <ul class="menu__box">
+                <li><a class="menu__item" href="#">about us</a></li>
+                <li><a class="menu__item" href="#">services</a></li>
+                <li><a class="menu__item current" href="./pages/team.html">team</a></li>
+                <li><a class="menu__item" href="#">publications</a></li>
+                <li><a class="menu__item" href="#">contact</a></li>
+              </ul>
+            </div>
+            <!-- Burger-End -->
           </div>
         </div>
       </div>
@@ -119,7 +141,6 @@
       </h1>
 
       <div class="team-card-wrapper">
-
         <div class="team-card">
           <img src="../images/team/Alexander.jpg" alt="" />
           <div class="team-card__description">
@@ -127,9 +148,9 @@
               <a href="../pages/team-Alexander.html">Alexander Alexandrovsky</a>
               <p>Managing partner</p>
             </div>
-            <a href="../pages/team-Alexander.html"><svg width="32px" height="32px" style="min-width: 10px">
-              <use href="../images/sprite.svg#team-check" />
-            </svg></a> 
+            <a href="../pages/team-Alexander.html"
+              ><svg width="32px" height="32px" style="min-width: 10px">
+                <use href="../images/sprite.svg#team-check" /></svg            ></a>
           </div>
         </div>
 
@@ -140,9 +161,9 @@
               <a href="../pages/team-Eugene.html">Eugene Patrikov</a>
               <p>Equity partner, Attorney-at-law</p>
             </div>
-            <a href="../pages/team-Eugene.html"><svg width="32px" height="32px" style="min-width: 10px">
-              <use href="../images/sprite.svg#team-check" />
-            </svg></a> 
+            <a href="../pages/team-Eugene.html"
+              ><svg width="32px" height="32px" style="min-width: 10px">
+                <use href="../images/sprite.svg#team-check" /></svg            ></a>
           </div>
         </div>
 
@@ -153,9 +174,9 @@
               <a href="../pages/team-Vladislav.html">Vladislav Melnik</a>
               <p>Associate</p>
             </div>
-            <a href="../pages/team-Vladislav.html"><svg width="32px" height="32px" style="min-width: 10px">
-              <use href="../images/sprite.svg#team-check" />
-            </svg></a> 
+            <a href="../pages/team-Vladislav.html"
+              ><svg width="32px" height="32px" style="min-width: 10px">
+                <use href="../images/sprite.svg#team-check" /></svg            ></a>
           </div>
         </div>
 
@@ -166,9 +187,9 @@
               <a href="../pages/team-Sergey.html">Sergey Binn</a>
               <p>Associate</p>
             </div>
-            <a href="../pages/team-Sergey.html"><svg width="32px" height="32px" style="min-width: 10px">
-              <use href="../images/sprite.svg#team-check" />
-            </svg></a> 
+            <a href="../pages/team-Sergey.html"
+              ><svg width="32px" height="32px" style="min-width: 10px">
+                <use href="../images/sprite.svg#team-check" /></svg            ></a>
           </div>
         </div>
 
@@ -179,9 +200,9 @@
               <a href="../pages/team-Oksana.html">Oksana Kobzar</a>
               <p>Equity partner, Attorney-at-law</p>
             </div>
-            <a href="../pages/team-Oksana.html"><svg width="32px" height="32px" style="min-width: 10px">
-              <use href="../images/sprite.svg#team-check" />
-            </svg></a> 
+            <a href="../pages/team-Oksana.html"
+              ><svg width="32px" height="32px" style="min-width: 10px">
+                <use href="../images/sprite.svg#team-check" /></svg            ></a>
           </div>
         </div>
 
@@ -192,9 +213,9 @@
               <a href="../pages/team-Julia.html">Julia Wolk</a>
               <p>Associate, Attorney-at-law</p>
             </div>
-            <a href="../pages/team-Julia.html"><svg width="32px" height="32px" style="min-width: 10px">
-              <use href="../images/sprite.svg#team-check" />
-            </svg></a> 
+            <a href="../pages/team-Julia.html"
+              ><svg width="32px" height="32px" style="min-width: 10px">
+                <use href="../images/sprite.svg#team-check" /></svg            ></a>
           </div>
         </div>
       </div>
@@ -224,10 +245,9 @@
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
-            <!-- <svg width="38" height="38">
-              <use href="#B3B3BA" fill="#24A3FF"/>
-            </svg> -->
-            <img src="../images/Facebook-Footer.svg" alt="Facebook-logo" />
+            <svg width="38" height="38">
+              <use href="../images/sprite.svg#Facebook-Footer" fill="#24A3FF" />
+            </svg>
           </a>
           <a href="tel:0800 211 927">0800 211 927</a>
           <a href="mailto:contact@forstudy.space">contact@forstudy.space</a>
@@ -239,7 +259,7 @@
         <a
           href="https://www.google.com.ua/maps/place/%D1%83%D0%BB.+%D0%9C%D0%B5%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0,+14%2F1,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4367984,30.5301301,475m/data=!3m2!1e3!4b1!4m6!3m5!1s0x40d4cf07295b8e39:0x17b2112e2dc0e7a!8m2!3d50.436795!4d30.532705!16s%2Fg%2F11c5mrd800?entry=ttu"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer nofollow"
         >
           On map</a
         >
@@ -249,9 +269,11 @@
           rel="noopener noreferrer nofollow"
         >
           <!-- <svg width="38" height="38">
-              <use href="#B3B3BA" fill="#24A3FF"/>
-            </svg> -->
-          <img src="../images/Facebook-Footer.svg" alt="Facebook-logo" />
+            <use href="#B3B3BA" fill="#24A3FF"/>
+          </svg> -->
+          <svg width="38" height="38">
+            <use href="../images/sprite.svg#Facebook-Footer" fill="#24A3FF" />
+          </svg>
         </a>
 
         <a href="tel:0800 211 927">0800 211 927</a>
