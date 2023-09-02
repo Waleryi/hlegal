@@ -176,8 +176,11 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 697px;
+  height: 799px;
   transform: translate(-50%, -55%);
   z-index: 1;
+  max-width: 100%;
 }
 .section-1 .scroll-icon {
   color: white;
@@ -367,7 +370,7 @@ h2 {
 }
 
 .tabs {
-  padding-top: 693px;
+  padding-top: 110vh;
   color: #fff;
 }
 .tabs h2 {
@@ -390,6 +393,7 @@ h2 {
 
 .ui-tabs-nav {
   display: block;
+  overflow-x: auto;
 }
 
 .ui-tabs-tab {
@@ -720,6 +724,7 @@ footer .foot-wrapper .foot_map span {
   }
   .container-mobile .second-row {
     display: flex;
+    max-width: 95vw;
     position: relative;
     z-index: 2;
     padding: 15px 15px;
@@ -742,6 +747,9 @@ footer .foot-wrapper .foot_map span {
     font-size: 36px;
     font-style: normal;
     line-height: normal;
+  }
+  .container-mobile .second-row .logo-wrapper a svg {
+    color: #c71c36;
   }
   .container-mobile #menu__toggle {
     opacity: 0;
@@ -840,11 +848,14 @@ footer .foot-wrapper .foot_map span {
   .container-mobile .menu__item:hover {
     background-color: #cfd8dc;
   }
+  .section-1 .h-logo {
+    max-width: 90%;
+  }
   .section-1 > p {
     transform: translate(3%, 120%);
   }
   .tabs {
-    padding-top: 575px;
+    padding-top: 100vh;
     padding-bottom: 150px;
   }
   .tabs ul {
@@ -892,6 +903,9 @@ footer .foot-wrapper .foot_map span {
   .ui-tabs-panel {
     width: 100%;
   }
+  .services-section {
+    padding-top: 275px;
+  }
   .companies .company-items {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -923,9 +937,10 @@ footer .foot-wrapper .foot_map span {
   .section-1 > img {
     width: 523px;
     height: 600px;
+    max-width: 90%;
   }
   .section-1 > p {
-    max-width: 300px;
+    max-width: 200px;
     transform: translate(-8%, 15%);
   }
   .section-1 .scroll-icon {
@@ -1003,7 +1018,10 @@ footer .foot-wrapper .foot_map span {
 }
 @media (max-width: 450px) {
   .section-1 > p {
-    right: -12%;
+    right: 6%;
+  }
+  .section-1 .h-logo {
+    max-width: 90%;
   }
   .company-card img {
     max-height: 50%;

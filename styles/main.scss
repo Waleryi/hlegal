@@ -4,22 +4,20 @@
   overflow: hidden;
   min-height: 100vh;
   border-radius: 0 0 12px;
-  // max-height: 4300px;
   padding-top: 152px;
   background: base.$gradient-bg;
   z-index: -3;
-  // background-image: url(../images/Symbol.svg);
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // position: relative;
 
   // h-logo--!!
   .h-logo {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 697px;
+    height: 799px;
     transform: translate(-50%, -55%);
     z-index: 1;
+    max-width: 100%;
   }
 
   .scroll-icon {
@@ -196,9 +194,9 @@
     &__flex {
       display: flex;
       flex-direction: column;
-        h2 {
-          padding-right: 8px;
-        }
+      h2 {
+        padding-right: 8px;
+      }
       img {
         width: 60px;
         height: 60px;
@@ -221,7 +219,7 @@
   // Slider-End
 }
 .tabs {
-  padding-top: 693px;
+  padding-top: 110vh;
   color: base.$white;
   h2 {
     font-size: 30px;
@@ -242,6 +240,7 @@
 }
 .ui-tabs-nav {
   display: block;
+  overflow-x: auto;
 }
 .ui-tabs-tab {
   transition: all 0.5s;
@@ -573,6 +572,7 @@ footer {
     }
     .second-row {
       display: flex;
+      max-width: 95vw;
       position: relative;
       z-index: 2;
       padding: 15px 15px;
@@ -592,6 +592,9 @@ footer {
             font-size: 36px;
             font-style: normal;
             line-height: normal;
+          }
+          svg {
+            color: #c71c36;
           }
         }
       }
@@ -707,6 +710,9 @@ footer {
     }
   }
   .section-1 {
+    .h-logo {
+      max-width: 90%;
+    }
     > p {
       transform: translate(3%, 120%);
     }
@@ -714,7 +720,7 @@ footer {
 
   // Text-Slider under H-Start-media-800
   .tabs {
-    padding-top: 575px;
+    padding-top: 100vh;
     padding-bottom: 150px;
     ul {
       display: flex;
@@ -770,6 +776,10 @@ footer {
     width: 100%;
   }
   // Text-Slider under H-End-media-800
+
+  .services-section {
+    padding-top: 275px;
+  }
   // Цветные фирмы-карточки
   .companies {
     .company-items {
@@ -816,9 +826,10 @@ footer {
     > img {
       width: 523px;
       height: 600px;
+      max-width: 90%;
     }
     > p {
-      max-width: 300px;
+      max-width: 200px;
       transform: translate(-8%, 15%);
     }
     .scroll-icon {
@@ -916,7 +927,10 @@ footer {
 @media (max-width: 450px) {
   .section-1 {
     > p {
-      right: -12%;
+      right: 6%;
+    }
+    .h-logo {
+      max-width: 90%;
     }
   }
   .company-card {
