@@ -195,21 +195,20 @@ main {
   width: 40%;
   border-radius: 12px;
   height: 80vh;
-  .sendform{
+  .sendform {
     margin: 0 auto;
     padding: 30px;
-      h1 {
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    background: base.$gradient-red-text;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    h1 {
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      background: base.$gradient-red-text;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
-  }
-
 }
 
 footer {
