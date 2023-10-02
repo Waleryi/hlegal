@@ -181,8 +181,34 @@
         </div>
 
         <div class="sendform-wrapper">
-            <div class="sendform"><h1>We would like to help you</h1></div>
-            
+          <form class="sendform">
+            <h2>We would like to help you</h2>
+            <input type="text" placeholder="Name" required maxlength="36" />
+            <textarea
+              name=""
+              id=""
+              rows="10"
+              placeholder="Message"
+              maxlength="350"
+            ></textarea>
+            <h3>How to answer you?</h3>
+            <input
+              type="tel"
+              placeholder="Phone number"
+              required
+              maxlength="16"
+            />
+            <input
+              type="text"
+              placeholder="Email"
+              required 
+              maxlength="50"
+              pattern="[a-z0-9._%+-]+@[a-z.0-9._-]+\.[a-z]{2,4}$"
+              
+            />
+            <!-- !WORKING EMAIL PATTERN!!!!! -->
+            <button class="btn" type="submit">Send message</button>
+          </form>
         </div>
       </section>
     </main>
