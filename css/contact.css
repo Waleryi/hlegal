@@ -27,6 +27,10 @@ body {
   line-height: 26px;
 }
 
+header {
+  background-color: #323264;
+}
+
 .container {
   max-width: 1440px;
   z-index: 2;
@@ -123,6 +127,8 @@ h2 {
   padding-top: 50px;
   width: 100%;
   color: white;
+  background: #323264;
+  border: none;
 }
 .header .flex.wrapper {
   align-items: center;
@@ -161,6 +167,10 @@ h2 {
     list-style: none;
     text-decoration: none;
   }
+}
+
+header {
+  background-color: #323264;
 }
 
 .section-1 {
@@ -1368,8 +1378,8 @@ footer .foot-wrapper .foot_map span {
     right: 0;
     z-index: 4;
     overflow: hidden;
-    background-color: #f0145a;
-    background-image: linear-gradient(225deg, #f0145a 0%, #784BA0 50%, #2B86C5 100%);
+    background-color: #00329e;
+    background-image: linear-gradient(225deg, #00329e 0%, #784BA0 50%, #2B86C5 100%);
   }
   .container-mobile .flex.wrapper {
     display: block;

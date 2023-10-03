@@ -349,8 +349,11 @@ footer {
     right: 0;
     z-index: 4;
     overflow: hidden;
-    background-color: #f0145a;
-background-image: linear-gradient(225deg, #f0145a 0%, #784BA0 50%, #2B86C5 100%);
+    background-color: #00329e;
+    background-image: linear-gradient(225deg, #00329e 0%, #784BA0 50%, #2B86C5 100%);
+    
+//    ! previous workung-colors background-color: #f0145a;
+// background-image: linear-gradient(225deg, #f0145a 0%, #784BA0 50%, #2B86C5 100%);
 
     .flex.wrapper {
       display: block;
