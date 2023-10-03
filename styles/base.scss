@@ -41,6 +41,9 @@ body {
   line-height: 26px;
 }
 
+header {
+  background-color: #323264;
+}
 .container {
   max-width: 1440px;
   z-index: 2;
@@ -132,6 +135,8 @@ h2 {
   padding-top: 50px;
   width: 100%;
   color: white;
+  background: #323264;
+  border: none;
   .flex.wrapper {
     align-items: center;
     gap: 24px;

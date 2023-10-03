@@ -1,5 +1,8 @@
 @use "./base.scss";
 
+header {
+  background-color: #323264;
+}
 .section-1 {
   overflow: hidden;
   min-height: 100vh;
@@ -811,10 +814,10 @@ footer {
             font-size: 20px;
           }
           svg {
-            width: 18px;
             height: 26px;
             color: #f0145a;
-            margin-right: 4px;
+            margin-right: 5px;
+            padding-right: 0;
           }
         }
       }

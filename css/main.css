@@ -27,6 +27,10 @@ body {
   line-height: 26px;
 }
 
+header {
+  background-color: #323264;
+}
+
 .container {
   max-width: 1440px;
   z-index: 2;
@@ -123,6 +127,8 @@ h2 {
   padding-top: 50px;
   width: 100%;
   color: white;
+  background: #323264;
+  border: none;
 }
 .header .flex.wrapper {
   align-items: center;
@@ -161,6 +167,10 @@ h2 {
     list-style: none;
     text-decoration: none;
   }
+}
+
+header {
+  background-color: #323264;
 }
 
 .section-1 {
@@ -925,10 +935,10 @@ footer .foot-wrapper .foot_map span {
     font-size: 20px;
   }
   .container-mobile .second-row .logo-wrapper a svg {
-    width: 18px;
     height: 26px;
     color: #f0145a;
-    margin-right: 4px;
+    margin-right: 5px;
+    padding-right: 0;
   }
   .section-1 {
     overflow: hidden;

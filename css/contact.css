@@ -925,10 +925,10 @@ footer .foot-wrapper .foot_map span {
     font-size: 20px;
   }
   .container-mobile .second-row .logo-wrapper a svg {
-    width: 18px;
     height: 26px;
     color: #f0145a;
-    margin-right: 4px;
+    margin-right: 5px;
+    padding-right: 0;
   }
   .section-1 {
     overflow: hidden;
@@ -1233,17 +1233,33 @@ main .container {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.sendform-wrapper .sendform input {
+.sendform-wrapper .sendform .input {
   width: 100%;
   margin: 15px 0;
   border-radius: 8px;
   padding: 15px;
+  border: 1px solid #fff;
+  transition: all 0.5s;
+}
+.sendform-wrapper .sendform .input:focus {
+  border: 1px solid #24a3ff;
+}
+.sendform-wrapper .sendform .input:invalid {
+  border: 1px solid red;
+  color: red;
+}
+.sendform-wrapper .sendform .input:disabled {
+  border-color: #ededf7;
+  background: #ededf7;
+}
+.sendform-wrapper .sendform .input:disabled::-moz-placeholder {
+  color: #b3b3ba;
+}
+.sendform-wrapper .sendform .input:disabled::placeholder {
+  color: #b3b3ba;
 }
 .sendform-wrapper .sendform textarea {
-  width: 100%;
   height: 130px;
-  border-radius: 8px;
-  padding: 15px;
 }
 .sendform-wrapper .sendform h3 {
   color: #b3b3ba;
@@ -1270,6 +1286,9 @@ main .container {
 }
 .sendform-wrapper .sendform .btn:active {
   background: #006ccf;
+}
+.sendform-wrapper .sendform .loader {
+  display: none;
 }
 
 footer {
@@ -1324,4 +1343,215 @@ footer .foot-wrapper .foot_map .foot_items > a::before {
 footer .foot-wrapper .foot_map span {
   font-size: 16px;
   color: #b3b3ba;
+}
+
+@media (max-width: 900px) {
+  body {
+    max-width: 900px;
+  }
+  .header .container {
+    display: none;
+  }
+  .header .small-btn,
+  .header .telmobile {
+    color: white;
+  }
+  .container-mobile {
+    display: flex;
+    min-width: 335px;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    overflow: hidden;
+    background-color: #f0145a;
+    background-image: linear-gradient(225deg, #f0145a 0%, #784BA0 50%, #2B86C5 100%);
+  }
+  .container-mobile .flex.wrapper {
+    display: block;
+    width: 100%;
+  }
+  .container-mobile .first-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+  }
+  .container-mobile .buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .container-mobile .second-row {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    padding: 15px 15px;
+  }
+  .container-mobile .second-row .logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    max-width: 169px;
+  }
+  .container-mobile .second-row .logo-wrapper a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .container-mobile .second-row .logo-wrapper a svg {
+    color: #f0145a;
+  }
+  .container-mobile .second-row .logo-wrapper a p {
+    color: #323264;
+    font-size: 36px;
+    font-style: normal;
+    line-height: normal;
+  }
+  .container-mobile #menu__toggle {
+    opacity: 0;
+  }
+  .container-mobile #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+    background-color: #f0145a;
+  }
+  .container-mobile #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+    background-color: #f0145a;
+  }
+  .container-mobile #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #f0145a;
+  }
+  .container-mobile #menu__toggle:checked ~ .menu__box {
+    right: 0 !important;
+  }
+  .container-mobile .menu__btn {
+    position: fixed;
+    top: 88px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .container-mobile .menu__btn > span,
+  .container-mobile .menu__btn span::before,
+  .container-mobile .menu__btn span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #323264;
+    transition-duration: 0.25s;
+  }
+  .container-mobile .menu__btn span::before {
+    content: "";
+    top: -8px;
+  }
+  .container-mobile .menu__btn span::after {
+    content: "";
+    top: 8px;
+  }
+  .container-mobile .menu__box {
+    display: block;
+    position: fixed;
+    border-radius: 12px;
+    bottom: 0;
+    right: -130%;
+    transform: translate(-9%, 0%);
+    width: 85%;
+    margin: 0;
+    padding-top: 60px;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.25s;
+  }
+  .container-mobile .menu__box li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5fa;
+    border-radius: 12px;
+    margin: 15px 12px;
+  }
+  .container-mobile .menu__box li a {
+    font-weight: 700;
+  }
+  .container-mobile .menu__box li:active {
+    background-color: #e6e6f0;
+  }
+  .container-mobile .menu__box li::before {
+    content: "";
+  }
+  .container-mobile .menu__box li::before a::before {
+    content: "";
+  }
+  .container-mobile .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #24a3ff;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    transition-duration: 0.25s;
+  }
+  .container-mobile .menu__item.current {
+    color: #f0145a;
+  }
+  .container-mobile .menu__item:hover {
+    background-color: #cfd8dc;
+    transition: color 0.3s;
+  }
+  main .container {
+    margin-top: 120px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 60px;
+  }
+  main .container .contacts {
+    width: 100%;
+  }
+  main .container .sendform-wrapper {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .container-mobile .second-row .logo-wrapper a p {
+    font-size: 20px;
+  }
+  .container-mobile .second-row .logo-wrapper a svg {
+    width: 23px;
+    height: 26px;
+    color: #f0145a;
+    margin-right: 5px;
+    padding-right: 0;
+  }
+  .sendform-wrapper .sendform h2 {
+    font-size: 25px;
+  }
+  .sendform-wrapper .sendform .input {
+    font-size: 16px;
+  }
+  .sendform-wrapper .sendform .btn span {
+    font-size: 16px;
+  }
+}
+@media (max-width: 400px) {
+  .contacts a {
+    font-size: 15px;
+  }
+  .contacts .line {
+    margin: 20px 0;
+  }
 }/*# sourceMappingURL=contact.css.map */

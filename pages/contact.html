@@ -93,7 +93,7 @@
               <a href="#services">services</a>
               <a href="./team.html">team</a>
               <a href="#publications">publications</a>
-              <a href="">contact</a>
+              <a href="./contact.html">contact</a>
             </nav>
           </div>
         </div>
@@ -107,7 +107,7 @@
               <button class="small-btn">RU</button>
               <button class="small-btn active">EN</button>
             </div>
-            <a href="tel:+38(050)3901591">0800 211 927</a>
+            <a href="tel:+38(050)3901591" class="telmobile">0800 211 927</a>
           </div>
           <div class="flex second-row">
             <div class="logo-wrapper">
@@ -116,7 +116,7 @@
                 <svg width="21px" height="47px">
                   <use href="../images/sprite.svg#pages-slash" />
                 </svg>
-                <p>team</p></a
+                <p>contact</p></a
               >
             </div>
             <!-- Burger-Start -->
@@ -130,12 +130,12 @@
                 <li><a class="menu__item" href="#">about us</a></li>
                 <li><a class="menu__item" href="#">services</a></li>
                 <li>
-                  <a class="menu__item current" href="./pages/team.html"
+                  <a class="menu__item " href="./team.html"
                     >team</a
                   >
                 </li>
                 <li><a class="menu__item" href="#">publications</a></li>
-                <li><a class="menu__item" href="#">contact</a></li>
+                <li><a class="menu__item current" href="./contact.html">contact</a></li>
               </ul>
             </div>
             <!-- Burger-End -->
@@ -183,10 +183,17 @@
         <div class="sendform-wrapper">
           <form class="sendform">
             <h2>We would like to help you</h2>
-            <input type="text" placeholder="Name" required maxlength="36" />
+            <input
+              class="input"
+              type="text"
+              placeholder="Name"
+              required
+              minlength="0"
+              maxlength="36"
+            />
             <textarea
               name=""
-              id=""
+              class="input"
               rows="10"
               placeholder="Message"
               maxlength="350"
@@ -195,19 +202,25 @@
             <input
               type="tel"
               placeholder="Phone number"
-              required
               maxlength="16"
+              class="input"
             />
+
             <input
               type="text"
               placeholder="Email"
-              required 
+              required
               maxlength="50"
               pattern="[a-z0-9._%+-]+@[a-z.0-9._-]+\.[a-z]{2,4}$"
-              
+              class="input"
             />
             <!-- !WORKING EMAIL PATTERN!!!!! -->
-            <button class="btn" type="submit">Send message</button>
+            <button class="btn" type="submit">
+              <span>Send message</span>
+              <svg width="24" height="24" class="loader">
+                <use href="..images/sprive.svg#loader" />
+              </svg>
+            </button>
           </form>
         </div>
       </section>
@@ -274,5 +287,24 @@
         <span>© 2021 HLEGAL Law company, LLC</span>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("submit", formSubmit);
+
+      function formSubmit(event) {
+        event.preventDefault();
+        let loading = true;
+        const btn = document.querySelector(".btn");
+        btn.disabled = true;
+        btn.classList.add("loading");
+
+        setTimeout(() => {
+          loading = false;
+          btn.classList.remove("loading");
+          btn.disabled = false;
+          document.querySelector(".sendform").reset();
+        }, 3000);
+      }
+    </script>
   </body>
 </html>
