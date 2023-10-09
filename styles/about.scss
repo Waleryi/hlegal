@@ -133,7 +133,7 @@ main .flex {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 60px;
+  margin: 60px auto 0;
   max-width: 1360px;
   padding-bottom: 60px;
 
@@ -144,6 +144,12 @@ main .flex {
     border-left: 4px solid #e6e6f0;
     width: 45%;
     padding-left: 30px;
+    .flex-topline {
+      padding-bottom: 10px;
+    }
+    h3 {
+      padding-left: 8px;
+    }
   }
   &__right {
     width: 45%;
@@ -224,6 +230,7 @@ main .flex {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: nowrap;
   h4 {
     font-size: 14px;
     font-style: normal;
@@ -244,13 +251,16 @@ main .flex {
     background-color: #fff;
     margin: 0 15px;
     border-radius: 12px;
+    padding: 25px 0;
     display: flex;
     justify-content: center;
     align-content: center;
+    max-width: 370px;
     // height: 150px;
     // width: 20%;
     &__image {
-      padding: 25px 30px;
+      height: 60px;
+      width: auto;
     }
   }
   .slick-dots li {
@@ -297,6 +307,7 @@ footer {
     .foot_map {
       display: flex;
       justify-content: space-between;
+      padding-top: 30px;
       .foot_items {
         display: flex;
         align-items: baseline;
@@ -323,10 +334,27 @@ footer {
     }
   }
 }
+@media (min-width: 1280px) {
+  .slider-wrapper {
+    min-height: 270px;
+    max-height: 270px;
+  }
+}
+@media (max-width: 1024px) {
+  .slider-wrapper {
+    .slider-card {
+      width: 17vw;
+      &__image {
+        height: 40px;
+        width: auto;
+      }
+    }
+  }
+}
 
-@media (max-width: 900px) {
+@media (max-width: 930px) {
   body {
-    max-width: 900px;
+    max-width: 930px;
   }
   .header {
     .container {
@@ -338,10 +366,10 @@ footer {
     }
   }
   .container-mobile {
+    border-bottom-right-radius: 24px;
     display: flex;
     min-width: 335px;
     width: 100%;
-    // height: 102px;
     margin: 0 auto;
     position: fixed;
     padding: 0;
@@ -369,9 +397,6 @@ footer {
       display: flex;
       justify-content: space-between;
       padding: 15px 15px;
-      // background-color: #f5f5fa;
-      // background-color: #f0145a;
-      // background-image: linear-gradient(225deg, #f0145a 0%, #784BA0 50%, #2B86C5 100%);
     }
     .buttons {
       display: flex;
@@ -388,7 +413,7 @@ footer {
         align-items: center;
         height: auto;
         width: 100%;
-        max-width: 169px;
+        max-width: 320px;
         a {
           display: flex;
           align-items: flex-start;
@@ -445,7 +470,7 @@ footer {
         position: absolute;
         width: 100%;
         height: 4px;
-        background-color: base.$main-color;
+        background-color: base.$white;
         transition-duration: 0.25s;
       }
       span {
@@ -513,6 +538,82 @@ footer {
     .menu__item:hover {
       background-color: #cfd8dc;
       transition: color 0.3s;
+    }
+  }
+
+  main .flex {
+    &.top {
+      padding-top: 80px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .container-mobile .first-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    background-color: unset;
+  }
+}
+
+@media (max-width: 767px) {
+  .slick-initialized .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .slider-wrapper .slider-card {
+    width: 35vw;
+  }
+  main .flex {
+    flex-direction: column;
+    align-items: center;
+    &__left {
+      width: 85%;
+      h1 {
+        padding-bottom: 28px;
+      }
+    }
+    &__right {
+      width: 85%;
+    }
+    &__right-top {
+      width: 85%;
+    }
+  }
+  .picture {
+    h2 {
+      font-size: 46px;
+    }
+  }
+}
+@media (max-width: 640px) {
+  .container-mobile .second-row .logo-wrapper a p {
+    font-size: 22px;
+  }
+  main .flex {
+    padding-bottom: 30px;
+    margin: 30px auto 0;
+  }
+}
+@media (max-width: 500px) {
+  main .flex {
+    &__left {
+      h1 {
+        font-size: 30px;
+      }
+    }
+    &__right {
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+  .picture {
+    h2 {
+      font-size: 36px;
+      letter-spacing: 13px;
     }
   }
 }
