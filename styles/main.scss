@@ -392,6 +392,13 @@ header {
   &__card {
     background: #fff;
     border-radius: 8px;
+    height: 100%;
+    &:hover {
+      h4 {
+        color: #f0145a;
+        transition: 0.5s color;
+      }
+    }
     p {
       font-size: 14px;
       line-height: 1.58;
@@ -792,9 +799,10 @@ footer {
   }
   .publications-cards {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .lastcard {
-    grid-column: 1/3;
+    height: 100%;
+    .lastcard {
+      grid-column: 1/3;
+    }
   }
 }
 // ---800px-END

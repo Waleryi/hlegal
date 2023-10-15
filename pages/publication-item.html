@@ -1,11 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <meta
+      property="og:image"
+      content="https://static.wixstatic.com/media/370685_5478e34671b841c797bf1496eb338078~mv2.jpg/v1/fill/w_640,h_368,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/370685_5478e34671b841c797bf1496eb338078~mv2.jpg"
+    />
+    <meta
+      name="description"
+      content="Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve the adoption of a number of decisions that are important for the industry. Many people form the practice of applying the law of the sea in Ukraine.
+      HLEGAL is a reliable business partner, confirmed by stable cooperation with international law firms, the trust of large Ukrainian and international companies, and the recognition of professional ratings."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="../css/publications-item.css" />
+
+    <title>Publications-page</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="flex wrapper">
+          <div class="logo-wrapper">
+            <a href="../index.html"
+              ><img src="../images/Logo-Dark.svg" alt="logo" />
+              <svg width="21px" height="47px">
+                <use href="../images/sprite.svg#pages-slash" />
+              </svg>
+              <p>publications</p></a
+            >
+          </div>
+
+          <div>
+            <div class="flex first-row">
+              <button class="small-btn">UA</button>
+              <button class="small-btn">RU</button>
+              <button class="small-btn active">EN</button>
+              <ul class="flex">
+                <li>
+                  <a
+                    href="https://www.google.com.ua/maps/place/%D1%83%D0%BB.+%D0%9C%D0%B5%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0,+14%2F1,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4367984,30.5301301,475m/data=!3m2!1e3!4b1!4m6!3m5!1s0x40d4cf07295b8e39:0x17b2112e2dc0e7a!8m2!3d50.436795!4d30.532705!16s%2Fg%2F11c5mrd800?entry=ttu"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    Kyiv, Mechnikova str, 14/1</a
+                  >
+                </li>
+                <li><a href="tel:+38(050)3901591">0800 211 927</a></li>
+                <li>
+                  <a
+                    href="https://uk-ua.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    ><svg width="24px" height="24px" style="min-width: 10px">
+                      <use href="../images/sprite.svg#header-fb-icon" /></svg
+                  ></a>
+
+                  <!-- <svg
+                              width="24px"
+                              height="24px"
+                              style="min-width: 10px"
+                            >
+                              <use href="./images/sprite.svg#header-gray-fb-icon" />
+                            </svg> -->
+                </li>
+              </ul>
+            </div>
+            <nav class="flex navigation">
+              <a href="./about.html">about us</a>
+              <a href="./services.html">services</a>
+              <a href="./team.html">team</a>
+              <a href="./publications.html">publications</a>
+              <a href="./contact.html">contact</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="container-mobile">
+        <div class="flex wrapper">
+          <div class="flex first-row">
+            <div class="buttons">
+              <button class="small-btn">UA</button>
+              <button class="small-btn">RU</button>
+              <button class="small-btn active">EN</button>
+            </div>
+            <a href="tel:+38(050)3901591" class="telmobile">0800 211 927</a>
+          </div>
+          <div class="flex second-row">
+            <div class="logo-wrapper">
+              <a href="../index.html"
+                ><img src="../images/Logo-Dark.svg" alt="logo" />
+                <svg width="21px" height="47px">
+                  <use href="../images/sprite.svg#pages-slash" />
+                </svg>
+                <p>publications</p></a
+              >
+            </div>
+            <!-- Burger-Start -->
+            <div class="hamburger-menu">
+              <input id="menu__toggle" type="checkbox" />
+              <label class="menu__btn" for="menu__toggle">
+                <span></span>
+              </label>
+
+              <ul class="menu__box">
+                <li>
+                  <a class="menu__item" href="./about.html">about us</a>
+                </li>
+                <li>
+                  <a class="menu__item" href="./services.html">services</a>
+                </li>
+                <li>
+                  <a class="menu__item" href="./team.html">team</a>
+                </li>
+                <li>
+                  <a class="menu__item current" href="./publications.html"
+                    >publications</a
+                  >
+                </li>
+                <li>
+                  <a class="menu__item" href="./contact.html">contact</a>
+                </li>
+              </ul>
+            </div>
+            <!-- Burger-End -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- todo - MAIN!!! -->
+    <main>
+      <section class="main-wrapper">
+        <div class="new-item">
+          <img src="../images/publications/Cover.jpg" alt="" />
+          <h1>
+            Penalty for the Good Corporation: what will happen to Google and
+            others for violating the GDPR
+          </h1>
+          <p>September 29</p>
+        </div>
+
+        <div class="description">
+          <p>
+            On January 21, the French National Data Protection Commission (CNIL)
+            announced on its website that it had fined Google for violating the
+            EU's General Data Protection Regulation (GDPR). It took six months
+            for the EU countries to make a quality level-up in the amount of
+            fines for non-compliance with this standard. Prior to that, the fine
+            was mainly € 20,000-30,000, with the largest fine amounting to €
+            400,000 and related to a hospital in Portugal. But this precedent is
+            interesting not so much the amount of the fine as the rigidity of
+            the regulator's approaches. Denis Beregovyi, Axon Partners, explains
+            why, especially for Mind.
+            <br />
+            <br />
+            For what? The group complaints against Google arrived at CNIL on the
+            same day that the GDPR came into force. The complainants reported
+            that Google processed users' personal data without due cause, in
+            particular to create personalized advertising offers.
+          </p>
+          <h2>
+            To the attention of Ukrainian security officers: the inspection was
+            conducted online, without searches, without seizure of servers or
+            other visible interference for business. And so it was possible.
+          </h2>
+          <h3>
+            According to the results of CNIL inspections revealed violations of
+            two requirements of the GDPR:
+          </h3>
+          <ol>
+            <li>
+              Transparency and awareness of users about the processing of
+              personal data.
+            </li>
+            <li>
+              Lack of proper user consent for the processing of personal data
+              for the purpose of personalizing advertising.
+            </li>
+          </ol>
+          <p>
+            In the case of personalization of advertising, Google was sure to
+            obtain the consent of users, because, firstly, when creating Google
+            accounts, the user agrees to the Privacy Policy, and secondly,
+            Google has a section "Ads personalization", where you can disable
+            this feature.
+          </p>
+            <!-- !Mini-image -->
+          <div class="commercial">
+            <a
+              href="https://support.google.com/My-Ad-Center-Help/answer/12155656?hl=uk&co=GENIE.Platform%3DAndroid"
+              ><img src="../images/publications/Illustration.jpg" alt=""
+            /></a>
+            <p>
+              This is what the ad personalization settings window in your Google
+              Account looks like
+            </p>
+          </div>
+
+          <p>
+            However, CNIL does not think so, because the information about the
+            personalization of advertising is not clear enough to users. As an
+            example, the Commission claims that the relevant "Personalization"
+            window does not contain information on the full range of Google
+            services that collect and process personal data for this purpose
+            (YouTube, Google search, Play Store, Google pictures, Gmail, etc.).
+            ), and therefore, the user cannot realize to what extent the data is
+            used and how exactly they can be combined.However, CNIL does not
+            think so, because the information about the personalization of
+            advertising is not clear enough to users. As an example, the
+            Commission claims that the relevant "Personalization" window does
+            not contain information on the full range of Google services that
+            collect and process personal data for this purpose (YouTube, Google
+            search, Play Store, Google pictures, Gmail, etc.). ), and therefore,
+            the user cannot realize to what extent the data is used and how
+            exactly they can be combined.
+          </p>
+          <h3>So, let's walk through the text of the CNIL decision</h3>
+          <p>
+            Why France and not Ireland. Google operates in Europe through a
+            legal entity in Ireland. But the case was not initiated by the
+            Irish, but by the French regulator. This is why it happened.
+            <br />
+            <br />
+            If data processing decisions are taken anywhere outside the EU,
+            there is a one-stop mechanism - where the complaint is received, the
+            body considers it. Because Google's data processing center is
+            located in the United States and the complaint was first received in
+            France, CNIL considered it.
+          </p>
+        </div>
+        <div class="networks">
+          <a href="https://uk-ua.facebook.com/" class="networks__item"
+            ><img src="../images/publications/Facebook.svg" alt="" /></a
+          ><a href="https://ua.linkedin.com/" class="networks__item"
+            ><img src="../images/publications/LinkedIn.svg" alt="" /></a
+          ><a href="https://web.telegram.org/k/" class="networks__item"
+            ><img src="../images/publications/Telegram.svg" alt=""
+          /></a>
+        </div>
+      </section>
+
+      <section class="publications">
+        <div class="publications-wrapper" id="publications">
+          <a href="./publications.html">Publications ></a>
+          <h2>Recommended</h2>
+          <div class="publications-cards">
+            <a href="./pages/publications.html"
+              ><div class="publications-cards__card">
+                <img
+                  src="../images/publications/item-1.jpg"
+                  alt="Working process"
+                />
+                <div class="publications-cards__item">
+                  <h4>Equity associate</h4>
+                  <p>April 22</p>
+                  <div class="publications-cards__line"></div>
+                </div>
+                <p>
+                  I'm a jun on projects. I am a co-owner of a law firm. How it
+                  happened. Before entering my parents told me that if I…
+                </p>
+              </div></a
+            >
+
+            <a href="./publications.html">
+              <div class="publications-cards__card">
+                <img src="../images/publications/item-2.jpg" alt="GDPR-logo" />
+                <div class="publications-cards__item">
+                  <h4>
+                    Penalty for the Good Corporation: what will happen to Google
+                    and others for violating the GDPR
+                  </h4>
+                  <p>September 29</p>
+                  <div class="publications-cards__line"></div>
+                </div>
+                <p>
+                  And why the recovery of 50 million euros could be a fateful
+                  precedent According to Mind.ua January 21 National Commission
+                  for Data Protection.
+                </p>
+              </div></a
+            >
+
+            <a href="./publications.html" class="lastcard">
+              <div class="publications-cards__card lastcard">
+                <img
+                  src="../images/publications/item-3.jpg"
+                  alt="Team at work"
+                />
+                <div class="publications-cards__item">
+                  <h4>Millennial Testament</h4>
+                  <p>August 19</p>
+                  <div class="publications-cards__line"></div>
+                </div>
+                <p>
+                  What and how modern vloggers, opinion leaders and
+                  crypto-millionaires will inherit A typical legacy of the
+                  Ukrainian generation X looks like this: an apartment in…
+                </p>
+              </div></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="foot-wrapper">
+        <div class="foot_map">
+          <div class="foot_items">
+            <span>Kyiv, Mechnikova str, 14/1</span>
+            <svg width="6" height="6">
+              <use href="#B3B3BA" fill="#B3B3BA" />
+            </svg>
+            <a
+              href="https://www.google.com.ua/maps/place/%D1%83%D0%BB.+%D0%9C%D0%B5%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0,+14%2F1,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4367984,30.5301301,475m/data=!3m2!1e3!4b1!4m6!3m5!1s0x40d4cf07295b8e39:0x17b2112e2dc0e7a!8m2!3d50.436795!4d30.532705!16s%2Fg%2F11c5mrd800?entry=ttu"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              On map</a
+            >
+          </div>
+
+          <span>© 2021 HLEGAL Law company, LLC</span>
+        </div>
+        <div class="footer-nav">
+          <a
+            href="https://uk-ua.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            <svg width="38" height="38">
+              <use href="../images/sprite.svg#Facebook-Footer" fill="#24A3FF" />
+            </svg>
+          </a>
+          <a href="tel:0800211927">0800 211 927</a>
+          <a href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+        </div>
+      </div>
+
+      <div class="foot-wrapper-mobile">
+        <span>Kyiv, Mechnikova str, 14/1</span>
+        <a
+          href="https://www.google.com.ua/maps/place/%D1%83%D0%BB.+%D0%9C%D0%B5%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0,+14%2F1,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4367984,30.5301301,475m/data=!3m2!1e3!4b1!4m6!3m5!1s0x40d4cf07295b8e39:0x17b2112e2dc0e7a!8m2!3d50.436795!4d30.532705!16s%2Fg%2F11c5mrd800?entry=ttu"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          On map</a
+        >
+        <a
+          href="https://uk-ua.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <svg width="38" height="38">
+            <use href="../images/sprite.svg#Facebook-Footer" fill="#24A3FF" />
+          </svg>
+        </a>
+
+        <a href="tel:0800211927">0800 211 927</a>
+        <a href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+        <span>© 2021 HLEGAL Law company, LLC</span>
+      </div>
+    </footer>
+  </body>
 </html>

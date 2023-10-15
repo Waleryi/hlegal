@@ -563,6 +563,11 @@ header {
 .publications-cards__card {
   background: #fff;
   border-radius: 8px;
+  height: 100%;
+}
+.publications-cards__card:hover h4 {
+  color: #f0145a;
+  transition: 0.5s color;
 }
 .publications-cards__card p {
   font-size: 14px;
@@ -921,8 +926,9 @@ footer .foot-wrapper .foot_map span {
   }
   .publications-cards {
     grid-template-columns: repeat(2, 1fr);
+    height: 100%;
   }
-  .lastcard {
+  .publications-cards .lastcard {
     grid-column: 1/3;
   }
 }
