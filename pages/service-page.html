@@ -14,7 +14,7 @@
       href="../images/favicon.ico"
       type="image/x-icon"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
@@ -23,7 +23,17 @@
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    /> -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <link rel="stylesheet" href="../css/service-page.css" />
     <title>Service</title>
   </head>
@@ -153,13 +163,60 @@
               corporate papers - legal work distracts you from doing business.
               But there is not much work to do to hire an in-house lawyer.
               <br />
-              <br>
+              <br />
               In addition, over time, the work will become the same type and
               uninteresting for a full-time lawyer. And we know very well how
               difficult it is to find a good candidate with experience in the
               field of information technology in Ukraine.
             </p>
-            <button class="modal" type="button">Free consultation</button>
+            <button class="modal" id="opener" type="button">
+              Free consultation
+            </button>
+            <div id="dialog" title="Basic dialog">
+              <div class="sendform-wrapper">
+                <form class="sendform">
+                  <h2>We would like to help you</h2>
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Name"
+                    required
+                    minlength="0"
+                    maxlength="36"
+                  />
+                  <textarea
+                    name=""
+                    class="input"
+                    rows="10"
+                    placeholder="Message"
+                    maxlength="350"
+                  ></textarea>
+                  <h3>How to answer you?</h3>
+                  <input
+                    type="tel"
+                    placeholder="Phone number"
+                    maxlength="16"
+                    class="input"
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Email"
+                    required
+                    maxlength="50"
+                    pattern="[a-z0-9._%+-]+@[a-z.0-9._-]+\.[a-z]{2,4}$"
+                    class="input"
+                  />
+                  <!-- !WORKING EMAIL PATTERN!!!!! -->
+                  <button class="btn" type="submit">
+                    <span>Send message</span>
+                    <svg width="50" height="50" class="loader">
+                      <use href="../images/sprite.svg#loader" />
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
 
           <div class="service__description">
@@ -209,12 +266,10 @@
             </div>
           </div>
         </div>
-
       </section>
 
-
       <section class="publications">
-                <div class="underline-first"></div>
+        <div class="underline-first"></div>
         <div class="underline-second"></div>
         <div class="publications-wrapper" id="publications">
           <a href="./publications.html">Publications ></a>
@@ -337,5 +392,30 @@
         <span>© 2021 HLEGAL Law company, LLC</span>
       </div>
     </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+      $(function () {
+        $("#dialog").dialog({
+          autoOpen: false,
+          show: {
+            effect: "blind",
+            duration: 1000,
+          },
+          hide: {
+            effect: "explode",
+            duration: 1000,
+          },
+        });
+
+        $("#opener").on("click", function () {
+          $("#dialog").dialog("open");
+        });
+      });
+    </script>
   </body>
 </html>

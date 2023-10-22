@@ -1288,6 +1288,9 @@ main .container {
   text-transform: uppercase;
   padding-top: 30px;
 }
+.sendform-wrapper .sendform .loader {
+  display: none;
+}
 .sendform-wrapper .sendform .btn {
   padding: 18px 30px;
   width: 100%;
@@ -1304,10 +1307,33 @@ main .container {
 .sendform-wrapper .sendform .btn:active {
   background: #006ccf;
 }
-.sendform-wrapper .sendform .loader {
+.sendform-wrapper .sendform .btn:disabled {
+  border-color: #ededf7;
+  background: #ededf7;
+}
+.sendform-wrapper .sendform .btn:disabled::-moz-placeholder {
+  color: #b3b3ba;
+}
+.sendform-wrapper .sendform .btn:disabled::placeholder {
+  color: #b3b3ba;
+}
+.sendform-wrapper .sendform .btn.loading .loader {
+  display: block;
+  margin: 0 auto;
+  animation: 1.2s linear infinite both circle--animation;
+}
+.sendform-wrapper .sendform .btn.loading span {
   display: none;
 }
 
+@keyframes circle--animation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 footer {
   background: #f5f5fa;
 }
@@ -1386,7 +1412,7 @@ footer .foot-wrapper .foot_map span {
     z-index: 4;
     overflow: hidden;
     background-color: #00329e;
-    background-image: linear-gradient(225deg, #00329e 0%, #784BA0 50%, #2B86C5 100%);
+    background-image: linear-gradient(225deg, #00329e 0%, #784ba0 50%, #2b86c5 100%);
   }
   .container-mobile .flex.wrapper {
     display: block;

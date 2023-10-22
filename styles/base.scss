@@ -9,7 +9,12 @@ $white: #fff;
 $gradient-text: linear-gradient(118deg, #ef8080 0%, #f0145a 100%);
 $gradient-red-text: linear-gradient(118deg, #f0145a 0%, #ef8080 100%);
 $gradient-bg: linear-gradient(135deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
-$gradient-supersoft: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$gradient-supersoft: linear-gradient(
+  229deg,
+  #323264 11.93%,
+  #323264 57.17%,
+  #643e72 87.46%
+);
 
 * {
   margin: 0;
@@ -183,5 +188,111 @@ h2 {
         text-decoration: none;
       }
     }
+  }
+}
+
+.sendform-wrapper {
+  background-color: #f5f5fa;
+  width: 40%;
+  border-radius: 12px;
+  margin-bottom: 60px;
+  .sendform {
+    margin: 0 auto;
+    padding: 30px;
+    h2 {
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      background: $gradient-red-text;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .input {
+      width: 100%;
+      margin: 15px 0;
+      border-radius: 8px;
+      padding: 15px;
+      border: 1px solid #fff;
+      transition: all 0.5s;
+
+      &:focus {
+        border: 1px solid $blue;
+      }
+      &:invalid {
+        border: 1px solid red;
+        color: red;
+      }
+      &:disabled {
+        border-color: #ededf7;
+        background: #ededf7;
+        &::placeholder {
+          color: #b3b3ba;
+        }
+      }
+    }
+    textarea {
+      height: 130px;
+    }
+    h3 {
+      color: #b3b3ba;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding-top: 30px;
+    }
+    .loader {
+      display: none;
+    }
+    .btn {
+      padding: 18px 30px;
+      width: 100%;
+      border-radius: 12px;
+      color: #fff;
+      background: $blue;
+      box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+      transition: all 0.5s;
+      margin-top: 15px;
+      &:hover {
+        background: $blue1;
+      }
+      &:active {
+        background: $blue2;
+      }
+      &:disabled {
+        border-color: #ededf7;
+        background: #ededf7;
+
+        &::placeholder {
+          color: #b3b3ba;
+        }
+      }
+
+      &.loading {
+        .loader {
+          display: block;
+          margin: 0 auto;
+          animation: 1.2s linear infinite both circle--animation;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@keyframes circle--animation {
+  0% {
+    transform: rotate(0)
+    ;
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

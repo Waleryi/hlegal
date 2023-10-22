@@ -245,6 +245,9 @@ main {
       text-transform: uppercase;
       padding-top: 30px;
     }
+    .loader {
+      display: none;
+    }
     .btn {
       padding: 18px 30px;
       width: 100%;
@@ -260,10 +263,36 @@ main {
       &:active {
         background: base.$blue2;
       }
+      &:disabled {
+        border-color: #ededf7;
+        background: #ededf7;
+
+        &::placeholder {
+          color: #b3b3ba;
+        }
+      }
+
+      &.loading {
+        .loader {
+          display: block;
+          margin: 0 auto;
+          animation: 1.2s linear infinite both circle--animation;
+        }
+
+        span {
+          display: none;
+        }
+      }
     }
-    .loader {
-      display: none;
-    }
+  }
+}
+
+@keyframes circle--animation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -351,10 +380,15 @@ footer {
     z-index: 4;
     overflow: hidden;
     background-color: #00329e;
-    background-image: linear-gradient(225deg, #00329e 0%, #784BA0 50%, #2B86C5 100%);
-    
-//    ! previous workung-colors background-color: #f0145a;
-// background-image: linear-gradient(225deg, #f0145a 0%, #784BA0 50%, #2B86C5 100%);
+    background-image: linear-gradient(
+      225deg,
+      #00329e 0%,
+      #784ba0 50%,
+      #2b86c5 100%
+    );
+
+    //    ! previous workung-colors background-color: #f0145a;
+    // background-image: linear-gradient(225deg, #f0145a 0%, #784BA0 50%, #2B86C5 100%);
 
     .flex.wrapper {
       display: block;
@@ -367,8 +401,6 @@ footer {
       // background-color: #f5f5fa;
       // background-color: #f0145a;
       // background-image: linear-gradient(225deg, #f0145a 0%, #784BA0 50%, #2B86C5 100%);
-      
-      
     }
     .buttons {
       display: flex;
