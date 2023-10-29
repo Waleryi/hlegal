@@ -554,6 +554,7 @@ footer {
     }
   }
   .container-mobile {
+    border-bottom-right-radius: 24px;
     display: flex;
     min-width: 335px;
     width: 100%;
@@ -566,6 +567,13 @@ footer {
     right: 0;
     z-index: 4;
     overflow: hidden;
+    background-color: #00329e;
+    background-image: linear-gradient(
+      225deg,
+      #00329e 0%,
+      #784ba0 50%,
+      #2b86c5 100%
+    );
     .flex.wrapper {
       display: block;
       width: 100%;
@@ -574,7 +582,7 @@ footer {
       display: flex;
       justify-content: space-between;
       padding: 15px 15px;
-      background-color: rgba(245, 245, 250, 0.2);
+      background-color: inherit;
     }
     .buttons {
       display: flex;
@@ -714,9 +722,13 @@ footer {
       line-height: normal;
       text-decoration: none;
       transition-duration: 0.25s;
+      &.current {
+        color: #f0145a;
+      }
     }
     .menu__item:hover {
       background-color: #cfd8dc;
+      transition: color 0.3s;
     }
   }
   .section-1 {

@@ -312,6 +312,7 @@ footer {
     }
   }
   .container-mobile {
+    border-bottom-right-radius: 24px;
     display: flex;
     min-width: 335px;
     width: 100%;
@@ -324,6 +325,13 @@ footer {
     right: 0;
     z-index: 4;
     overflow: hidden;
+    background-color: #00329e;
+    background-image: linear-gradient(
+      225deg,
+      #00329e 0%,
+      #784ba0 50%,
+      #2b86c5 100%
+    );
     .flex.wrapper {
       display: block;
       width: 100%;
@@ -332,7 +340,7 @@ footer {
       display: flex;
       justify-content: space-between;
       padding: 15px 15px;
-      background-color: #f5f5fa;
+      background-color: inherit;
     }
     .buttons {
       display: flex;
@@ -340,6 +348,7 @@ footer {
     }
     .second-row {
       display: flex;
+      max-width: 95vw;
       position: relative;
       z-index: 2;
       padding: 15px 15px;
@@ -354,14 +363,14 @@ footer {
           display: flex;
           align-items: flex-start;
           justify-content: flex-start;
-          svg {
-            color: #f0145a;
-          }
           p {
-            color: base.$main-color;
+            color: base.$white;
             font-size: 36px;
             font-style: normal;
             line-height: normal;
+          }
+          svg {
+            color: #c71c36;
           }
         }
       }
@@ -406,7 +415,7 @@ footer {
         position: absolute;
         width: 100%;
         height: 4px;
-        background-color: base.$main-color;
+        background-color: base.$white;
         transition-duration: 0.25s;
       }
       span {
@@ -420,6 +429,10 @@ footer {
         }
       }
     }
+    // .menu__btn > span::before {
+    // }
+    // .menu__btn > span::after {
+    // }
     .menu__box {
       display: block;
       position: fixed;

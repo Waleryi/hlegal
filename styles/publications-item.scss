@@ -422,6 +422,7 @@ footer {
     display: flex;
     min-width: 335px;
     width: 100%;
+    // height: 102px;
     margin: 0 auto;
     position: fixed;
     padding: 0;
@@ -437,10 +438,6 @@ footer {
       #784ba0 50%,
       #2b86c5 100%
     );
-
-    //    ! previous workung-colors background-color: #f0145a;
-    // background-image: linear-gradient(225deg, #f0145a 0%, #784BA0 50%, #2B86C5 100%);
-
     .flex.wrapper {
       display: block;
       width: 100%;
@@ -449,6 +446,7 @@ footer {
       display: flex;
       justify-content: space-between;
       padding: 15px 15px;
+      background-color: inherit;
     }
     .buttons {
       display: flex;
@@ -456,6 +454,7 @@ footer {
     }
     .second-row {
       display: flex;
+      max-width: 95vw;
       position: relative;
       z-index: 2;
       padding: 15px 15px;
@@ -465,26 +464,25 @@ footer {
         align-items: center;
         height: auto;
         width: 100%;
-        max-width: 320px;
+        max-width: 169px;
         a {
           display: flex;
           align-items: flex-start;
           justify-content: flex-start;
-          svg {
-            color: #f0145a;
-          }
           p {
-            // color: base.$main-color;
-
+            color: base.$white;
             font-size: 36px;
             font-style: normal;
             line-height: normal;
+          }
+          svg {
+            color: #c71c36;
           }
         }
       }
     }
 
-    // !Burger-start
+    // Burger-start
     #menu__toggle {
       opacity: 0;
       &:checked {
@@ -537,6 +535,10 @@ footer {
         }
       }
     }
+    // .menu__btn > span::before {
+    // }
+    // .menu__btn > span::after {
+    // }
     .menu__box {
       display: block;
       position: fixed;
