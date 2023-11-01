@@ -395,6 +395,25 @@ header {
   background: linear-gradient(135deg, #323264 0%, #323264 73.96%, #a54b5f 100%);
   z-index: -3;
 }
+.section-1 .logo {
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+.section-1 .logo p {
+  font-size: 38px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 55%;
+  transform: translate(-50%, -55%);
+  left: 50%;
+  z-index: 2;
+}
 .section-1 .h-logo {
   position: absolute;
   top: 50%;
@@ -409,7 +428,7 @@ header {
   color: white;
   position: absolute;
   z-index: 2;
-  top: 88%;
+  top: calc(100% - 72px);
   right: 51%;
 }
 .section-1 .scroll-icon:hover {

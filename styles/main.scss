@@ -11,6 +11,25 @@ header {
   background: base.$gradient-bg;
   z-index: -3;
 
+  .logo {
+    height: auto;
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 38px;
+      font-weight: 700;
+      font-style: normal;
+      line-height: normal;
+      color: base.$white;
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 55%;
+      transform: translate(-50%, -55%);
+      left: 50%;
+      z-index: 2;
+    }
+  }
   // h-logo--!!
   .h-logo {
     position: absolute;
@@ -27,7 +46,7 @@ header {
     color: white;
     position: absolute;
     z-index: 2;
-    top: 88%;
+    top: calc(100% - 72px);
     right: 51%;
     &:hover {
       color: base.$accent-color;
