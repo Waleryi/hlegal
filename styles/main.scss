@@ -6,7 +6,7 @@ header {
 .section-1 {
   overflow: hidden;
   min-height: 100vh;
-  border-radius: 0 0 12px;
+  border-radius: 0 0 12px 12px;
   padding-top: 152px;
   background: base.$gradient-bg;
   z-index: -3;
@@ -15,6 +15,8 @@ header {
     height: auto;
     display: flex;
     align-items: center;
+    margin: 0 auto;
+
     p {
       font-size: 38px;
       font-weight: 700;
@@ -35,8 +37,9 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 697px;
-    height: 799px;
+    width: auto;
+    height: 100%;
+    max-height: 799px;
     transform: translate(-50%, -55%);
     z-index: 1;
     max-width: 100%;
@@ -122,18 +125,41 @@ header {
   max-width: 1440px;
   margin: 0 auto;
 }
+.underline-first {
+  width: 95%;
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+  background: #cacadb;
+  margin: 0 auto;
+  position: relative;
+}
 
+.underline-second {
+  width: 90%;
+  height: 10px;
+  border-radius: 0px 0px 12px 12px;
+  background: #e7e7f2;
+  margin: 0 auto;
+  position: relative;
+}
 .services-section {
   padding: 185px 60px 60px;
+  border-radius: 12px;
   a {
     color: base.$blue;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: none;
+    span {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+    }
     &:hover {
       color: base.$accent-color;
       transition: color 0.3s;
+      cursor: pointer;
     }
   }
   h2 {
@@ -144,6 +170,18 @@ header {
     padding: 15px 0 60px;
   }
   .services-cards {
+    .services-cards_subitems {
+      &:hover {
+        h4 {
+          background: base.$gradient-red-text;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s;
+        }
+      }
+    }
+
     h4 {
       font-size: 22px;
       font-weight: 700;
@@ -185,6 +223,16 @@ header {
       border-radius: 12px;
       background-color: base.$gray-bg;
       padding: 20px;
+      margin: 0 15px;
+      &:hover {
+        h3 {
+          background: base.$gradient-red-text;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          transition: all 0.3s;
+        }
+      }
       @media (min-width: 768px) {
         padding: 0;
       }
@@ -195,6 +243,7 @@ header {
         opacity: 0.2;
         color: base.$blue;
         font-size: 16px;
+        margin-top: 10px;
       }
 
       &.slick-active button:before {
@@ -217,13 +266,45 @@ header {
       display: flex;
       flex-direction: column;
       h2 {
+        padding-top: 15px; ;
         padding-right: 8px;
+        background: base.$gradient-red-text;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s;
+      }
+      h3 {
+        color: #24a3ff;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+      p {
+        
+        color: #b3b3ba;
+        font-style: normal;
+        &:first-of-type {          
+          font-size: 16px;
+          font-weight: 700;
+          line-height: normal;
+          padding-top: 30px;
+        }
+        &:last-of-type {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 157.142857%; /* 22px/14 */
+        }
       }
       img {
         width: 60px;
         height: 60px;
         border-radius: 50%;
         object-fit: cover;
+        border-radius: 50%;
       }
       @media (min-width: 768px) {
         flex-direction: row;
@@ -423,6 +504,7 @@ header {
       line-height: 1.58;
       padding: 15px 30px 30px;
       color: #000;
+      text-transform: none;
     }
     img {
       width: 100%;
@@ -434,6 +516,7 @@ header {
       font-weight: 700;
       color: base.$blue;
       padding: 30px 30px 15px;
+      text-transform: none;
     }
     p {
       padding: 0 30px 15px;
@@ -448,7 +531,7 @@ header {
     height: 4px;
     width: 90%;
     padding: 0 30px;
-    background-color: #b3b3ba;
+    background-color: #e6e6f0;
     margin: 0 auto;
   }
 }
@@ -456,7 +539,7 @@ header {
 footer {
   background: #f5f5fa;
   .foot-wrapper {
-    border-top: 4px solid #b3b3ba;
+    border-top: 2px solid #b3b3ba;
     width: 90%;
     max-width: 1600px;
     margin: 0 auto;
@@ -483,10 +566,7 @@ footer {
           }
         }
       }
-      a:nth-of-type(1):before {
-        content: "";
-      }
-      a::before {
+      a:not(:first-of-type):before {
         content: "●";
         color: #b3b3ba;
         padding: 0 10px;
@@ -496,6 +576,7 @@ footer {
     .foot_map {
       display: flex;
       justify-content: space-between;
+      padding-top: 30px;
       .foot_items {
         display: flex;
         align-items: baseline;
@@ -538,7 +619,7 @@ footer {
 @media (max-width: 1024px) {
   .section-1 {
     .h-logo {
-      transform: translate(-46%, -55%);
+      transform: translate(-43%, -55%);
     }
 
     > p {
@@ -751,9 +832,6 @@ footer {
     }
   }
   .section-1 {
-    .h-logo {
-      max-width: 90%;
-    }
     > p {
       transform: translate(3%, 120%);
     }
@@ -875,11 +953,13 @@ footer {
       transform: translate(-8%, 15%);
     }
     .scroll-icon {
-      top: 80%;
+      transform: translate(44%, -55%);
     }
   }
 
   .services-section {
+    padding: 275px 30px 60px;
+
     h2 {
       padding: 15px 0 30px;
       line-height: normal;
@@ -903,6 +983,9 @@ footer {
       }
     }
   }
+  .publications-wrapper {
+    padding: 30px;
+  }
 
   .publications-cards {
     display: flex;
@@ -918,7 +1001,7 @@ footer {
     align-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    border-top: 4px solid #b3b3ba;
+    border-top: 2px solid #E6E6F0;
     width: 90%;
     max-width: 640px;
     margin: 0 auto;
@@ -970,9 +1053,6 @@ footer {
   .section-1 {
     > p {
       right: 6%;
-    }
-    .h-logo {
-      max-width: 90%;
     }
   }
   .company-card {

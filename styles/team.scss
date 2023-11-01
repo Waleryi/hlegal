@@ -606,3 +606,11 @@ footer {
     }
   }
 }
+
+@media (max-width:640px) {
+  .container-mobile .second-row .logo-wrapper a p {
+
+    font-size: 23px;
+
+}
+}
